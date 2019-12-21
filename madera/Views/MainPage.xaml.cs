@@ -21,7 +21,7 @@ namespace madera.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Login, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -30,11 +30,17 @@ namespace madera.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                    case (int)MenuItemType.Profil:
+                        MenuPages.Add(id, new NavigationPage(new ProfilPage()));
                         break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                    case (int)MenuItemType.Projet:
+                        MenuPages.Add(id, new NavigationPage(new ProjetPage()));
+                        break;
+                    case (int)MenuItemType.Client:
+                        MenuPages.Add(id, new NavigationPage(new ClientPage()));
+                        break;
+                    case (int)MenuItemType.Login:
+                        MenuPages.Add(id, new NavigationPage(new LoginPage()));
                         break;
                 }
             }

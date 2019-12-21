@@ -1938,11 +1938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
       "projectName": "madera.Android",
-      "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+      "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
       "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\obj\\",
+      "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1963,8 +1963,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {
-              "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj"
+            "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+              "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
             }
           }
         }

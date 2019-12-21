@@ -573,11 +573,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
+      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
       "projectName": "madera",
-      "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
+      "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
       "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\obj\\",
+      "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
