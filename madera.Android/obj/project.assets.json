@@ -1932,39 +1932,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Seb\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/chabs/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
+      "projectUniqueName": "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/madera.Android.csproj",
       "projectName": "madera.Android",
-      "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
-      "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\obj\\",
+      "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/madera.Android.csproj",
+      "packagesPath": "/Users/chabs/.nuget/packages/",
+      "outputPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/chabs/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
-              "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
+            "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj": {
+              "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj"
             }
           }
         }

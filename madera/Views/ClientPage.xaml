@@ -5,13 +5,54 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="madera.Views.ClientPage"
+             BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Client">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Client"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid>
+            <Grid>
+ 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+ 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+ 
+            <!--<Button Grid.Row="1"  Grid.Column="1" Text="Nom" />
+            <Button Grid.Row="2"  Grid.Column="1" Text="Prenom" />
+            <Button Grid.Row="3"  Grid.Column="1" Text="Adresse" />
+            <Button Grid.Row="4"  Grid.Column="1" Text="Code Postal" />
+            <Button Grid.Row="5"  Grid.Column="1" Text="Ville" />
+            <Button Grid.Row="6"  Grid.Column="1" Text="Telephone" />
+            <Button Grid.Row="7"  Grid.Column="1" Text="Email" />-->
+ 
+ 
+            <Image
+             Grid.Row="1"  Grid.Column="2"
+             Source="Add_Client.png"
+             HorizontalOptions="Center"
+             VerticalOptions="CenterAndExpand" />
+
+            <Image
+             Grid.Row="2"  Grid.Column="2"
+             Source="List_Client.png"
+             HorizontalOptions="Center"
+             VerticalOptions="CenterAndExpand" />
+
+            <!--<Button Grid.Row="3"  Grid.Column="2"/>
+            <Button Grid.Row="4"  Grid.Column="2"/>
+            <Button Grid.Row="5"  Grid.Column="2"/>
+            <Button Grid.Row="6"  Grid.Column="2"/>
+            <Button Grid.Row="7"  Grid.Column="2"/>-->
+ 
+        </Grid>
+    </Grid>
     </ContentPage.Content>
     <!--<ContentPage.Content>
         <ContentPage.ToolbarItems>

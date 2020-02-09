@@ -1,39 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj": {}
+    "/Users/chabs/Documents/GitHub.nosync/madera/madera.iOS/madera.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj": {
+    "/Users/chabs/Documents/GitHub.nosync/madera/madera.iOS/madera.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj",
+        "projectUniqueName": "/Users/chabs/Documents/GitHub.nosync/madera/madera.iOS/madera.iOS.csproj",
         "projectName": "madera.iOS",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj",
-        "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\obj\\",
+        "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera.iOS/madera.iOS.csproj",
+        "packagesPath": "/Users/chabs/.nuget/packages/",
+        "outputPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/chabs/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "xamarinios10"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
-                "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
+              "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj": {
+                "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj"
               }
             }
           }
@@ -65,29 +59,25 @@
         }
       }
     },
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+    "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
+        "projectUniqueName": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj",
         "projectName": "madera",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
-        "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\obj\\",
+        "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj",
+        "packagesPath": "/Users/chabs/.nuget/packages/",
+        "outputPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/chabs/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -129,7 +119,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     }
