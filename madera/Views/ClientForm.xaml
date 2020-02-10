@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImageSource="BackGroud_Portrait_2.jpg"
+             x:Class="madera.Views.ClientForm"
+             Title="Formulaire_Client">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid>
+ 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+ 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+ 
+            <Label Grid.Row="1"  Grid.Column="1" Text="Nom" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="2"  Grid.Column="1" Text="Prenom" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="3"  Grid.Column="1" Text="Date de Naissance" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="4"  Grid.Column="1" Text="E-mail" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="5"  Grid.Column="1" Text="Telephone" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="6"  Grid.Column="1" Text="Commentaires" TextColor="WhiteSmoke"/>
+
+            <Entry Grid.Row="1"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="2"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="4"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Email"/>
+            <Entry Grid.Row="5"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Telephone"/>
+            <Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
+
+            <Label Grid.Row="1"  Grid.Column="2" Text="N° de Rue" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="2"  Grid.Column="2" Text="Rue" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="3"  Grid.Column="2" Text="Code Postal" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="4"  Grid.Column="2" Text="Ville" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="5"  Grid.Column="2" Text="Pays" TextColor="WhiteSmoke"/>
+
+            <Entry Grid.Row="1"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric"/>
+            <Entry Grid.Row="2"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="3"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric"/>
+            <Entry Grid.Row="4"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="5"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text"/>
+
+            <ImageButton
+             Grid.Row="7"  Grid.Column="1"
+             BackgroundColor="Transparent"
+             Source="BtnSauvegarder.png"
+             HorizontalOptions="Center"
+             VerticalOptions="CenterAndExpand" />
+
+            <ImageButton
+             Grid.Row="7"  Grid.Column="2"
+             BackgroundColor="Transparent"
+             Source="BtnAnnuler.png"
+             HorizontalOptions="Center"
+             VerticalOptions="CenterAndExpand" />
+ 
+        </Grid>
+    </Grid>
+    </ContentPage.Content>
+    <!--<ContentPage.Content>
+        <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+"
+                     Clicked="OnNoteAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView"
+              Margin="20"
+              ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Text}"
+                          Detail="{Binding Date}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </ContentPage.Content>
+</ContentPage>-->
+</ContentPage>

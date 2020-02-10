@@ -32,14 +32,14 @@
             <Button Grid.Row="6"  Grid.Column="1" Text="Telephone" />
             <Button Grid.Row="7"  Grid.Column="1" Text="Email" />-->
  
- 
-            <Image
+            <ImageButton
              Grid.Row="1"  Grid.Column="2"
              Source="Add_Client.png"
              HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand" />
+             VerticalOptions="CenterAndExpand"
+             Clicked="OnCreateClientClicked"/>
 
-            <Image
+            <ImageButton
              Grid.Row="2"  Grid.Column="2"
              Source="List_Client.png"
              HorizontalOptions="Center"

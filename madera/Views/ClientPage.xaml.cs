@@ -22,5 +22,10 @@ namespace madera.Views
             ToolbarItem item = (ToolbarItem)sender;
             
         }
+
+        async void OnCreateClientClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ClientForm());
+        }
     }
 }
