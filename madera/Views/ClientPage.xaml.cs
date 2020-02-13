@@ -27,5 +27,10 @@ namespace madera.Views
         {
             await Navigation.PushAsync(new ClientForm());
         }
+
+        //async void OnListClientClicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new ClientList());
+        //}
     }
 }

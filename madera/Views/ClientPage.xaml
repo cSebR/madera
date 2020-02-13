@@ -39,11 +39,12 @@
              VerticalOptions="CenterAndExpand"
              Clicked="OnCreateClientClicked"/>
 
-            <ImageButton
+            <!--<ImageButton
              Grid.Row="2"  Grid.Column="2"
              Source="List_Client.png"
              HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand" />
+             VerticalOptions="CenterAndExpand"
+             Clicked="OnListClientClicked"/>-->
 
             <!--<Button Grid.Row="3"  Grid.Column="2"/>
             <Button Grid.Row="4"  Grid.Column="2"/>

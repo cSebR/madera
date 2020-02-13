@@ -37,12 +37,12 @@
             <Label Grid.Row="5"  Grid.Column="1" Text="Telephone" TextColor="WhiteSmoke"/>
             <Label Grid.Row="6"  Grid.Column="1" Text="Commentaires" TextColor="WhiteSmoke"/>
 
-            <Entry Grid.Row="1"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
-            <Entry Grid.Row="2"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
-            <Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
-            <Entry Grid.Row="4"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Email"/>
-            <Entry Grid.Row="5"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Telephone"/>
-            <Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="1"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="NomClientEntry"/>
+            <Entry Grid.Row="2"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PrenomClientEntry"/>
+            <Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="DteNaissanceClientEntry"/>
+            <Entry Grid.Row="4"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Email" x:Name="EmailClientEntry"/>
+            <Entry Grid.Row="5"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Telephone" x:Name="TelephoneClientEntry"/>
+            <Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry"/>
 
             <Label Grid.Row="1"  Grid.Column="2" Text="N° de Rue" TextColor="WhiteSmoke"/>
             <Label Grid.Row="2"  Grid.Column="2" Text="Rue" TextColor="WhiteSmoke"/>
@@ -50,25 +50,27 @@
             <Label Grid.Row="4"  Grid.Column="2" Text="Ville" TextColor="WhiteSmoke"/>
             <Label Grid.Row="5"  Grid.Column="2" Text="Pays" TextColor="WhiteSmoke"/>
 
-            <Entry Grid.Row="1"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric"/>
-            <Entry Grid.Row="2"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text"/>
-            <Entry Grid.Row="3"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric"/>
-            <Entry Grid.Row="4"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text"/>
-            <Entry Grid.Row="5"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text"/>
+            <Entry Grid.Row="1"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric" x:Name="NumRueClientEntry"/>
+            <Entry Grid.Row="2"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="RuelientEntry"/>
+            <Entry Grid.Row="3"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric" x:Name="CPClientEntry"/>
+            <Entry Grid.Row="4"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="VilleClientEntry"/>
+            <Entry Grid.Row="5"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PaysClientEntry"/>
 
             <ImageButton
              Grid.Row="7"  Grid.Column="1"
              BackgroundColor="Transparent"
              Source="BtnSauvegarder.png"
              HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand" />
+             VerticalOptions="CenterAndExpand"
+             Clicked="OnSaveClientClicked"/>
 
             <ImageButton
              Grid.Row="7"  Grid.Column="2"
              BackgroundColor="Transparent"
              Source="BtnAnnuler.png"
              HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand" />
+             VerticalOptions="CenterAndExpand"
+             />
  
         </Grid>
     </Grid>
