@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/madera.Android.csproj": {}
+    "E:\\Workspace\\C#\\Madera\\madera.Android\\madera.Android.csproj": {}
   },
   "projects": {
-    "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/madera.Android.csproj": {
+    "E:\\Workspace\\C#\\Madera\\madera.Android\\madera.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/madera.Android.csproj",
+        "projectUniqueName": "E:\\Workspace\\C#\\Madera\\madera.Android\\madera.Android.csproj",
         "projectName": "madera.Android",
-        "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/madera.Android.csproj",
-        "packagesPath": "/Users/chabs/.nuget/packages/",
-        "outputPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera.Android/obj/",
+        "projectPath": "E:\\Workspace\\C#\\Madera\\madera.Android\\madera.Android.csproj",
+        "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+        "outputPath": "E:\\Workspace\\C#\\Madera\\madera.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/chabs/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj": {
-                "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj"
+              "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj": {
+                "projectPath": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj"
               }
             }
           }
@@ -48,25 +54,29 @@
         }
       }
     },
-    "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj": {
+    "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj",
+        "projectUniqueName": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj",
         "projectName": "madera",
-        "projectPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/madera.csproj",
-        "packagesPath": "/Users/chabs/.nuget/packages/",
-        "outputPath": "/Users/chabs/Documents/GitHub.nosync/madera/madera/obj/",
+        "projectPath": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj",
+        "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+        "outputPath": "E:\\Workspace\\C#\\Madera\\madera\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/chabs/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -112,7 +122,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

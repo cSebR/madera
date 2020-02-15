@@ -9,5 +9,13 @@ namespace madera.Models
         public int ID { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
+
+        public string FullName
+        {
+            get
+            {
+                return Nom.ToUpper() + " " + Prenom;
+            }
+        }
     }
 }
