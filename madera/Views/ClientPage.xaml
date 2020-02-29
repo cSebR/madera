@@ -13,16 +13,11 @@
  
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
  
             <Grid.RowDefinitions>
-                <RowDefinition Height="10*"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="10*"/>
             </Grid.RowDefinitions>
  
             <!--<Button Grid.Row="1"  Grid.Column="1" Text="Nom" />
@@ -34,20 +29,20 @@
             <Button Grid.Row="7"  Grid.Column="1" Text="Email" />-->
  
             <ImageButton
-             Grid.Row="2"  Grid.Column="2"
-             BackgroundColor="Transparent"
-             Source="Add_Client.png"
-             HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand"
-             Clicked="OnCreateClientClicked"/>
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="Transparent"
+                WidthRequest="400"
+                Source="Add_Client.png"
+                Clicked="OnCreateClientClicked"/>
 
              <ImageButton
-             Grid.Row="4"  Grid.Column="2"
-             BackgroundColor="Transparent"
-             Source="Add_Client.png"
-             HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand"
-             Clicked="OnCreateClientClicked"/>
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="Transparent"
+                Source="Add_Client.png"
+                WidthRequest="400"
+                Clicked="OnCreateClientClicked"/>
 
                 <!--<ImageButton
              Grid.Row="2"  Grid.Column="2"
