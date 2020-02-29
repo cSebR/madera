@@ -1,6 +1,6 @@
 .vs/
-madera.madera/bin
-madera.madera/obj
+madera/bin
+madera/obj
 madera.Android/bin
 madera.Android/obj
 madera.iOS/bin
