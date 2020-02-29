@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Workspace\\C#\\Madera\\madera.iOS\\madera.iOS.csproj": {}
+    "E:\\Workspace\\C#\\madera\\madera.iOS\\madera.iOS.csproj": {}
   },
   "projects": {
-    "E:\\Workspace\\C#\\Madera\\madera.iOS\\madera.iOS.csproj": {
+    "E:\\Workspace\\C#\\madera\\madera.iOS\\madera.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Workspace\\C#\\Madera\\madera.iOS\\madera.iOS.csproj",
+        "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera.iOS\\madera.iOS.csproj",
         "projectName": "madera.iOS",
-        "projectPath": "E:\\Workspace\\C#\\Madera\\madera.iOS\\madera.iOS.csproj",
+        "projectPath": "E:\\Workspace\\C#\\madera\\madera.iOS\\madera.iOS.csproj",
         "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
-        "outputPath": "E:\\Workspace\\C#\\Madera\\madera.iOS\\obj\\",
+        "outputPath": "E:\\Workspace\\C#\\madera\\madera.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj": {
-                "projectPath": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj"
+              "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
+                "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj": {
+    "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj",
+        "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj",
         "projectName": "madera",
-        "projectPath": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj",
+        "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj",
         "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
-        "outputPath": "E:\\Workspace\\C#\\Madera\\madera\\obj\\",
+        "outputPath": "E:\\Workspace\\C#\\madera\\madera\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

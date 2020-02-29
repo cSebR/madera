@@ -2110,11 +2110,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Workspace\\C#\\Madera\\madera.Android\\madera.Android.csproj",
+      "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj",
       "projectName": "madera.Android",
-      "projectPath": "E:\\Workspace\\C#\\Madera\\madera.Android\\madera.Android.csproj",
+      "projectPath": "E:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj",
       "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
-      "outputPath": "E:\\Workspace\\C#\\Madera\\madera.Android\\obj\\",
+      "outputPath": "E:\\Workspace\\C#\\madera\\madera.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2135,8 +2135,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj": {
-              "projectPath": "E:\\Workspace\\C#\\Madera\\madera\\madera.csproj"
+            "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
+              "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj"
             }
           }
         }
