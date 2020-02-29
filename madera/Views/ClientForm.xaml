@@ -36,13 +36,16 @@
             <Label Grid.Row="4"  Grid.Column="1" Text="E-mail" TextColor="WhiteSmoke"/>
             <Label Grid.Row="5"  Grid.Column="1" Text="Telephone" TextColor="WhiteSmoke"/>
             <Label Grid.Row="6"  Grid.Column="1" Text="Commentaires" TextColor="WhiteSmoke"/>
+            <Label Grid.Row="7"  Grid.Column="1" Text="{Binding RefClient}" TextColor="WhiteSmoke" x:Name="RefClientLabel"/>
 
             <Entry Grid.Row="1"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="NomClientEntry"/>
             <Entry Grid.Row="2"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PrenomClientEntry"/>
-            <Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="DteNaissanceClientEntry"/>
+            <!--<Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="DteNaissanceClientEntry"/>-->
+            <DatePicker Format="dd/MM/yyyy" Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" x:Name="DteNaissanceClientDatePicker"/>
             <Entry Grid.Row="4"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Email" x:Name="EmailClientEntry"/>
             <Entry Grid.Row="5"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Telephone" x:Name="TelephoneClientEntry"/>
-            <Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry"/>
+            <!--<Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry"/>-->
+            <Editor Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry" />
 
             <Label Grid.Row="1"  Grid.Column="2" Text="N° de Rue" TextColor="WhiteSmoke"/>
             <Label Grid.Row="2"  Grid.Column="2" Text="Rue" TextColor="WhiteSmoke"/>

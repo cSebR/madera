@@ -13,11 +13,11 @@ namespace madera.Views
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            //ClientList.ItemsSource = await App.Database.GetPeopleAsync();
-        }
+        //protected override async void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //    //ClientList.ItemsSource = await App.Database.GetPeopleAsync();
+        //}
 
         async void OnSaveClientClicked(object sender, EventArgs e)
         {
@@ -26,7 +26,8 @@ namespace madera.Views
                 await App.Database.SaveClientAsync(new ClientModel
                 {
                     Nom = NomClientEntry.Text,
-                    Prenom = NomClientEntry.Text
+                    Prenom = PrenomClientEntry.Text,
+                    RefClient = NomClientEntry.Text + PrenomClientEntry.Text + DateTime.Now
                     //Age = int.Parse(ageEntry.Text)
                 });
 
