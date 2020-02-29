@@ -49,14 +49,14 @@
              VerticalOptions="CenterAndExpand"
              Clicked="OnCreateClientClicked"/>
 
-            <!--<ImageButton
+                <!--<ImageButton
              Grid.Row="2"  Grid.Column="2"
              Source="List_Client.png"
              HorizontalOptions="Center"
              VerticalOptions="CenterAndExpand"
              Clicked="OnListClientClicked"/>-->
 
-            <!--<Button Grid.Row="3"  Grid.Column="2"/>
+                <!--<Button Grid.Row="3"  Grid.Column="2"/>
             <Button Grid.Row="4"  Grid.Column="2"/>
             <Button Grid.Row="5"  Grid.Column="2"/>
             <Button Grid.Row="6"  Grid.Column="2"/>
@@ -68,18 +68,6 @@
         <ContentPage.ToolbarItems>
         <ToolbarItem Text="+"
                      Clicked="OnNoteAddedClicked" />
-    </ContentPage.ToolbarItems>
-    <ListView x:Name="listView"
-              Margin="20"
-              ItemSelected="OnListViewItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Text}"
-                          Detail="{Binding Date}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-    </ContentPage.Content>
-</ContentPage>-->
+    </ContentPage.ToolbarItems> -->
 </ContentPage>
     

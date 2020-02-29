@@ -6,10 +6,10 @@ namespace madera.Models
 {
     public enum MenuItemType
     {
-        Login,
         Profil,
         Projet,
-        Client
+        Client,
+        Deconnexion
         
     }
     public class HomeMenuItem

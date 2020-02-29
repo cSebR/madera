@@ -1,4 +1,6 @@
-﻿using System;
+﻿using madera.Models;
+using madera.ViewModels;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -13,6 +15,13 @@ namespace madera.Views
         public ClientPage()
         {
             InitializeComponent();
+            this.BindingContext = new ClientViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ((ClientViewModel)this.BindingContext).Init();
         }
 
         void OnItemClicked(object sender, EventArgs e)

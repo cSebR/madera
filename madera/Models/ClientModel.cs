@@ -25,5 +25,12 @@ namespace madera.Models
 
         }
 
+        public string FullName
+        {
+            get
+            {
+                return Nom.ToUpper() + " " + Prenom;
+            }
+        }
     }
 }
