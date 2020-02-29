@@ -1016,24 +1016,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Seb\\.nuget\\packages\\": {},
+    "C:\\Users\\Axel\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj",
+      "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera.iOS\\madera.iOS.csproj",
       "projectName": "madera.iOS",
-      "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj",
-      "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\obj\\",
+      "projectPath": "E:\\Workspace\\C#\\madera\\madera.iOS\\madera.iOS.csproj",
+      "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+      "outputPath": "E:\\Workspace\\C#\\madera\\madera.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1047,8 +1047,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
-              "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
+            "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
+              "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj"
             }
           }
         }

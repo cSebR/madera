@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj": {}
+    "E:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj": {
+    "E:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
+        "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj",
         "projectName": "madera.Android",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
-        "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\obj\\",
+        "projectPath": "E:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj",
+        "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+        "outputPath": "E:\\Workspace\\C#\\madera\\madera.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
-                "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
+              "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
+                "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj"
               }
             }
           }
@@ -54,21 +54,21 @@
         }
       }
     },
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+    "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
+        "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj",
         "projectName": "madera",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
-        "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\obj\\",
+        "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj",
+        "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+        "outputPath": "E:\\Workspace\\C#\\madera\\madera\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -118,7 +118,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
