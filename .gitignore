@@ -1,1 +1,10 @@
 .vs/
+madera/bin
+madera/obj
+madera.Android/bin
+madera.Android/obj
+madera.iOS/bin
+madera.iOS/obj
+madera.MobileAppService/bin
+madera.MobileAppService/obj
+
