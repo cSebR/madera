@@ -1,4 +1,6 @@
-﻿using System;
+﻿using madera.Models;
+using madera.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,29 @@ namespace madera.Views
         public ProjetPage()
         {
             InitializeComponent();
+            this.BindingContext = new ProjetViewModel();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ((ProjetViewModel)this.BindingContext).Init();
+        }
+
+        void OnItemClicked(object sender, EventArgs e)
+        {
+            ToolbarItem item = (ToolbarItem)sender;
+
+        }
+
+        async void OnCreateProjetClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProjetForm());
+        }
+
+        //async void OnListClientClicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushAsync(new ClientList());
+        //}
     }
 }

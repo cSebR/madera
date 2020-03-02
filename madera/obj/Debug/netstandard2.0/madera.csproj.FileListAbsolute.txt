@@ -16,7 +16,8 @@ C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\View
 C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\Views\ProjetPage.xaml.g.cs
 C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\madera.AssemblyInfoInputs.cache
 C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\madera.AssemblyInfo.cs
-C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\madera.dll
 C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\ref\madera.dll
 C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\madera.pdb
+C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\Views\ProjetForm.xaml.g.cs
+C:\Users\Seb\source\repos\maderaTest\madera\madera\obj\Debug\netstandard2.0\XamlC.stamp

@@ -5,12 +5,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="madera.Views.ProjetPage"
+             BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Projet">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Projet"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ListView ItemsSource="{Binding Projets}"
+                          Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Nom}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <ImageButton Grid.Row="0"
+                             Source="add_projet.png"
+                             Margin="0,40,0,0"
+                             WidthRequest="300"
+                             HorizontalOptions="Center"
+                             Clicked="OnCreateProjetClicked"/>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
