@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj": {}
+    "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.iOS\\madera.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj": {
+    "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.iOS\\madera.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.iOS\\madera.iOS.csproj",
         "projectName": "madera.iOS",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\madera.iOS.csproj",
-        "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.iOS\\obj\\",
+        "projectPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.iOS\\madera.iOS.csproj",
+        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
-                "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
+              "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj": {
+                "projectPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj"
               }
             }
           }
@@ -65,21 +65,20 @@
         }
       }
     },
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+    "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
+        "projectUniqueName": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj",
         "projectName": "madera",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
-        "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\obj\\",
+        "projectPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj",
+        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

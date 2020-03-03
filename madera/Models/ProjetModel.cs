@@ -14,5 +14,11 @@ namespace madera.Models
         public DateTime Date { get; set; }
         public string Ref { get; set; }
         public int Created_by { get; set; }
+
+        /*[ForeignKey(typeof(Customer))]
+        public int CustomerId { get; set; }
+        [OneToMany]
+        public Customer Customer { get; set; }*/
     }
+
 }

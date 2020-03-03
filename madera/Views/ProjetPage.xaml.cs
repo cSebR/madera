@@ -34,12 +34,10 @@ namespace madera.Views
 
         async void OnCreateProjetClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ProjetForm());
+           // await Navigation.PushAsync(new ProjetForm());
+            await DisplayAlert("Nouveau Projet", "Selectionner un client", "Valider");
         }
 
-        //async void OnListClientClicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new ClientList());
-        //}
+       
     }
 }
