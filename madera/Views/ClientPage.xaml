@@ -42,7 +42,7 @@
                 BackgroundColor="Transparent"
                 Source="Add_Client.png"
                 WidthRequest="400"
-                Clicked="OnCreateClientClicked"/>
+                Clicked="OnListClientClicked"/>
 
                 <!--<ImageButton
              Grid.Row="2"  Grid.Column="2"

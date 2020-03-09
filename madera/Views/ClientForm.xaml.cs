@@ -13,12 +13,6 @@ namespace madera.Views
             InitializeComponent();
         }
 
-        //protected override async void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //    //ClientList.ItemsSource = await App.Database.GetPeopleAsync();
-        //}
-
         async void OnSaveClientClicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(NomClientEntry.Text) && !string.IsNullOrWhiteSpace(PrenomClientEntry.Text))
@@ -31,9 +25,12 @@ namespace madera.Views
                     //Age = int.Parse(ageEntry.Text)
                 });
 
-                NomClientEntry.Text = PrenomClientEntry.Text = string.Empty;
+                NomClientEntry.Text = PrenomClientEntry.Text = String.Empty;
                 //ClientList.ItemsSource = await App.Database.GetPeopleAsync();
             }
+
         }
+
     }
+
 }
