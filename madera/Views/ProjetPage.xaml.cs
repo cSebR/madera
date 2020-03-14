@@ -2,10 +2,7 @@
 using madera.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,12 +15,14 @@ namespace madera.Views
         {
             InitializeComponent();
             this.BindingContext = new ProjetViewModel();
+            
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
             ((ProjetViewModel)this.BindingContext).Init();
+           
         }
 
         void OnItemClicked(object sender, EventArgs e)
@@ -32,12 +31,40 @@ namespace madera.Views
 
         }
 
+
         async void OnCreateProjetClicked(object sender, EventArgs e)
         {
-           // await Navigation.PushAsync(new ProjetForm());
-            await DisplayAlert("Nouveau Projet", "Selectionner un client", "Valider");
+            base.OnAppearing();
+
+            var item = "client1";
+
+            // Popup choi du client
+            var client = await DisplayActionSheet("Selectionner un client","Cancel", null, item);
+            Debug.WriteLine("Client: " + client);
+
+            //Popup Nom du projet
+            string result = await DisplayPromptAsync("Entrer le nom du projet", "Nom du projet");
+       
+             Debug.WriteLine("Answer: " + result);
+
+
+          
+
+            //Enregistrement en base
+            if (!string.IsNullOrWhiteSpace(result))
+            {
+
+                await App.Database.SaveProjetAsync(new ProjetModel
+                {
+                    Nom = result,
+                    Date = new DateTime(),
+                });
+
+                //result = string.Empty;
+
+                await Navigation.PushAsync(new FicheProjet());
+            }
         }
 
-       
     }
 }

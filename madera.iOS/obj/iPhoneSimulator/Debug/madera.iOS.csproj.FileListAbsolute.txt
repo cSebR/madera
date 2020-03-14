@@ -119,3 +119,7 @@ C:\Users\Utilisateur\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\Xa
 C:\Users\Utilisateur\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\madera.iOS.csproj.CopyComplete
 C:\Users\Utilisateur\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\madera.iOS.exe
 C:\Users\Utilisateur\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\madera.iOS.pdb
+C:\Users\Utilisateur\source\repos\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.IOS.dll
+C:\Users\Utilisateur\source\repos\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.IOS.pdb
+C:\Users\Utilisateur\source\repos\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.dll
+C:\Users\Utilisateur\source\repos\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.pdb
