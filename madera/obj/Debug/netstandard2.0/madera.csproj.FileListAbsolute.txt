@@ -45,3 +45,4 @@ C:\Users\Utilisateur\source\repos\madera\madera\obj\Debug\netstandard2.0\ref\mad
 C:\Users\Utilisateur\source\repos\madera\madera\obj\Debug\netstandard2.0\madera.pdb
 C:\Users\Utilisateur\source\repos\madera\madera\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Utilisateur\source\repos\madera\madera\obj\Debug\netstandard2.0\Views\FicheProjet.xaml.g.cs
+C:\Users\Utilisateur\source\repos\madera\madera\obj\Debug\netstandard2.0\Views\ProjetList.xaml.g.cs

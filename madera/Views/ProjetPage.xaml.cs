@@ -62,8 +62,15 @@ namespace madera.Views
 
                 //result = string.Empty;
 
-                await Navigation.PushAsync(new FicheProjet());
+                await Navigation.PushAsync(new ProjetList());
             }
+        }
+
+        async void OnListProjectClicked(object sender, EventArgs e)
+        {
+            base.OnAppearing();
+
+            await Navigation.PushAsync(new ProjetList());
         }
 
     }
