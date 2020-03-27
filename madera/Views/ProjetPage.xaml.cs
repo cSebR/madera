@@ -22,7 +22,6 @@ namespace madera.Views
         {
             base.OnAppearing();
             ((ProjetViewModel)this.BindingContext).Init();
-           
         }
 
         void OnItemClicked(object sender, EventArgs e)

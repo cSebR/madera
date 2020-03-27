@@ -66,3 +66,4 @@ C:\Users\Seb\source\repos\madera\madera\obj\Debug\netstandard2.0\madera.dll
 C:\Users\Seb\source\repos\madera\madera\obj\Debug\netstandard2.0\ref\madera.dll
 C:\Users\Seb\source\repos\madera\madera\obj\Debug\netstandard2.0\madera.pdb
 C:\Users\Seb\source\repos\madera\madera\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Seb\source\repos\madera\madera\obj\Debug\netstandard2.0\madera.csprojAssemblyReference.cache
