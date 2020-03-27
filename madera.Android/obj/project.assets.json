@@ -2149,24 +2149,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Utilisateur\\.nuget\\packages\\": {},
+    "C:\\Users\\Seb\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
       "projectName": "madera.Android",
-      "projectPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
-      "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera.Android\\obj\\",
+      "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+      "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2180,8 +2180,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj": {
-              "projectPath": "C:\\Users\\Utilisateur\\source\\repos\\madera\\madera\\madera.csproj"
+            "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {
+              "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj"
             }
           }
         }
