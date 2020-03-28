@@ -20,8 +20,6 @@ namespace madera.Views
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
-
-            MenuPages.Add((int)MenuItemType.Login, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -38,9 +36,6 @@ namespace madera.Views
                         break;
                     case (int)MenuItemType.Client:
                         MenuPages.Add(id, new NavigationPage(new ClientPage()));
-                        break;
-                    case (int)MenuItemType.Login:
-                        MenuPages.Add(id, new NavigationPage(new LoginPage()));
                         break;
                 }
             }

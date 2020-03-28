@@ -1,3 +1,0 @@
-D:\Workspace\C#\madera\madera.Test\obj\Debug\netcoreapp3.1\madera.Test.csprojAssemblyReference.cache
-D:\Workspace\C#\madera\madera.Test\obj\Debug\netcoreapp3.1\madera.Test.AssemblyInfoInputs.cache
-D:\Workspace\C#\madera\madera.Test\obj\Debug\netcoreapp3.1\madera.Test.AssemblyInfo.cs
