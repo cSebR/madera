@@ -14,6 +14,7 @@ namespace madera.Services
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<ClientModel>().Wait();
+			_database.CreateTableAsync<ProjetModel>().Wait();
         }
 
         public Task<List<ClientModel>> GetPeopleAsync()
@@ -24,6 +25,16 @@ namespace madera.Services
         public Task<int> SaveClientAsync(ClientModel client)
         {
             return _database.InsertAsync(client);
+        }
+
+        public Task<List<ProjetModel>> GetProjetModelAsync()
+        {
+            return _database.Table<ProjetModel>().ToListAsync();
+        }
+
+        public Task<int> SaveProjetAsync(ProjetModel projet)
+        {
+            return _database.InsertAsync(projet);
         }
     }
 }
