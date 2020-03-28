@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj": {}
+    "D:\\Workspace\\C#\\madera\\madera.Test\\madera.Test.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj": {
+    "D:\\Workspace\\C#\\madera\\madera.Test\\madera.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj",
-        "projectName": "madera.Android",
-        "projectPath": "D:\\Workspace\\C#\\madera\\madera.Android\\madera.Android.csproj",
+        "projectUniqueName": "D:\\Workspace\\C#\\madera\\madera.Test\\madera.Test.csproj",
+        "projectName": "madera.Test",
+        "projectPath": "D:\\Workspace\\C#\\madera\\madera.Test\\madera.Test.csproj",
         "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\C#\\madera\\madera.Android\\obj\\",
+        "outputPath": "D:\\Workspace\\C#\\madera\\madera.Test\\obj\\",
         "projectStyle": "PackageReference",
-        "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -23,34 +23,63 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "monoandroid90"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "monoandroid90": {
+          "netcoreapp3.1": {
             "projectReferences": {
               "D:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
                 "projectPath": "D:\\Workspace\\C#\\madera\\madera\\madera.csproj"
               }
             }
           }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
         }
       },
       "frameworks": {
-        "monoandroid90": {
+        "netcoreapp3.1": {
           "dependencies": {
-            "Xamarin.Essentials": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[16.2.0, )"
             },
-            "Xamarin.Forms": {
+            "coverlet.collector": {
               "target": "Package",
-              "version": "[4.3.0.908675, )"
+              "version": "[1.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
-          }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -99,6 +128,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -106,6 +139,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.3.0.908675, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.6.292, )"
             }
           },
           "imports": [
