@@ -47,8 +47,6 @@ namespace madera.Views
              Debug.WriteLine("Answer: " + result);
 
 
-          
-
             //Enregistrement en base
             if (!string.IsNullOrWhiteSpace(result))
             {
@@ -68,7 +66,6 @@ namespace madera.Views
         async void OnListProjectClicked(object sender, EventArgs e)
         {
             base.OnAppearing();
-
             await Navigation.PushAsync(new ProjetList());
         }
 
