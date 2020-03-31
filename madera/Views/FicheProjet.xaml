@@ -8,6 +8,9 @@
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Fiche Projet">
     <ContentPage.Content>
+
+
+
         <Grid>
             <Grid>
                 <Grid.RowDefinitions>
@@ -20,15 +23,19 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
+
                 <StackLayout>
                     <Label Text="ID : "/>
                     <Label x:Name="IDEntry"/>
 
-                    <Label Text="Name : "/><Label Text="" x:Name="NameEntry"/>
+                    <Label Text="Name : "/>
+                    <Label Text="" x:Name="NameEntry"/>
 
                     <Label Text="Date : "/>
                     <Label Text="" x:Name="DateEntry"/>
                 </StackLayout>
+
+
 
                 <!--<ListView  ItemsSource="{Binding Projets}"  Grid.Row="1">
                     <ListView.ItemTemplate>
@@ -43,6 +50,6 @@
                 </ListView>-->
             </Grid>
         </Grid>
-        
+
     </ContentPage.Content>
 </ContentPage>

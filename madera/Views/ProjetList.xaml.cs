@@ -39,9 +39,9 @@ namespace madera.Views
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Selected = e.Item as ProjetModel;
-            Debug.WriteLine("Id: " + Selected.ID);
+            /*Debug.WriteLine("Id: " + Selected.ID);
             Debug.WriteLine("Nom : " + Selected.Nom);
-            Debug.WriteLine("Date : " + Selected.Date);
+            Debug.WriteLine("Date : " + Selected.Date);*/
 
             await Navigation.PushAsync(new FicheProjet(Selected.ID,Selected.Nom,Selected.Date));
         }

@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {}
+    "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+    "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
+        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
         "projectName": "madera",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
+        "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
         "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\obj\\",
+        "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,10 +47,6 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "Rg.Plugins.Popup": {
-              "target": "Package",
-              "version": "[1.2.0.223, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

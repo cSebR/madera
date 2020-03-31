@@ -17,7 +17,7 @@ namespace madera.Views
         public FicheProjet(int ID, string Nom, DateTime Date)
         {
             InitializeComponent();
-            this.BindingContext = new ProjetViewModel();
+            BindingContext = new ProjetViewModel();
             IDEntry.Text = ID.ToString();
             NameEntry.Text = Nom;
             DateEntry.Text = Date.ToString();
