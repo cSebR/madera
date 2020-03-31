@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
+      "Rg.Plugins.Popup/1.2.0.223": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll": {},
+          "lib/MonoAndroid/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll": {},
+          "lib/MonoAndroid/Rg.Plugins.Popup.dll": {}
+        }
+      },
       "sqlite-net-pcl/1.6.292": {
         "type": "package",
         "dependencies": {
@@ -801,7 +815,11 @@
           "build/monoandroid90/Xamarin.Android.Support.ViewPager.targets": {}
         }
       },
+<<<<<<< HEAD
       "Xamarin.Essentials/1.5.1": {
+=======
+      "Xamarin.Essentials/1.5.2": {
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.Compat": "28.0.0.3",
@@ -846,7 +864,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+<<<<<<< HEAD
           "Xamarin.Essentials": "1.5.1",
+=======
+          "Rg.Plugins.Popup": "1.2.0.223",
+          "Xamarin.Essentials": "1.5.2",
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
           "Xamarin.Forms": "4.5.0.495",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -860,6 +883,36 @@
     }
   },
   "libraries": {
+    "Rg.Plugins.Popup/1.2.0.223": {
+      "sha512": "0ruzj7EedYRUhhsk327z7ymaHzf9E/n6Slg2ZJfOYqtZ14tX1dtWbyNRSmGEnWxLyN1qSq4Od4U6vYupHRpdtw==",
+      "type": "package",
+      "path": "rg.plugins.popup/1.2.0.223",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.pdb",
+        "lib/MonoAndroid/Rg.Plugins.Popup.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.pdb",
+        "lib/netstandard1.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard1.0/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.pdb",
+        "readme.txt",
+        "rg.plugins.popup.1.2.0.223.nupkg.sha512",
+        "rg.plugins.popup.nuspec"
+      ]
+    },
     "sqlite-net-pcl/1.6.292": {
       "sha512": "TZPs206/ZZXhDAgCzxE5Dmw1enkRmtpd1RKt+dLJA6Kvml4RxwkasRs4js2kijtGxik1SLCs39rh9nl9YFwrYg==",
       "type": "package",
@@ -1727,10 +1780,17 @@
         "xamarin.android.support.viewpager.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Xamarin.Essentials/1.5.1": {
       "sha512": "XEKAp7BXfZkTGbMqySXtuhwxb06ULjkJNQ8p44e8amOPm4m4VTVV92F13ov0a8NFNU+6JFm98510QK9Q/HBD5A==",
       "type": "package",
       "path": "xamarin.essentials/1.5.1",
+=======
+    "Xamarin.Essentials/1.5.2": {
+      "sha512": "qHxkrkx5jIC0X/qWhxCPZ3MuuOJm8bfCzAoUtlpOBSE4oV0JhrkTezK0A+IV+k/MeJ3zKc8FexaIXah9rlCTIw==",
+      "type": "package",
+      "path": "xamarin.essentials/1.5.2",
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1771,7 +1831,11 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
+<<<<<<< HEAD
         "xamarin.essentials.1.5.1.nupkg.sha512",
+=======
+        "xamarin.essentials.1.5.2.nupkg.sha512",
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
         "xamarin.essentials.nuspec"
       ]
     },
@@ -2068,10 +2132,16 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
+<<<<<<< HEAD
       "Xamarin.Essentials >= 1.5.1",
       "Xamarin.Forms >= 4.5.0.495",
       "madera >= 1.0.0",
       "sqlite-net-pcl >= 1.6.292"
+=======
+      "Xamarin.Essentials >= 1.5.2",
+      "Xamarin.Forms >= 4.5.0.495",
+      "madera >= 1.0.0"
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
     ]
   },
   "packageFolders": {
@@ -2081,11 +2151,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
       "projectName": "madera.Android",
-      "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+      "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
       "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\obj\\",
+      "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2106,8 +2176,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {
-              "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj"
+            "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+              "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
             }
           }
         }
@@ -2118,15 +2188,22 @@
         "dependencies": {
           "Xamarin.Essentials": {
             "target": "Package",
+<<<<<<< HEAD
             "version": "[1.5.1, )"
+=======
+            "version": "[1.5.2, )"
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
           },
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.5.0.495, )"
+<<<<<<< HEAD
           },
           "sqlite-net-pcl": {
             "target": "Package",
             "version": "[1.6.292, )"
+=======
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
           }
         }
       }

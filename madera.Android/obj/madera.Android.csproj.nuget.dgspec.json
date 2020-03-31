@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj": {}
+    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj": {
+    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
         "projectName": "madera.Android",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\madera.Android.csproj",
+        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\madera.Android.csproj",
         "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera.Android\\obj\\",
+        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {
-                "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj"
+              "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
+                "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj"
               }
             }
           }
@@ -44,31 +44,39 @@
           "dependencies": {
             "Xamarin.Essentials": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[1.5.1, )"
+=======
+              "version": "[1.5.2, )"
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
             },
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.5.0.495, )"
+<<<<<<< HEAD
             },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.6.292, )"
+=======
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
             }
           }
         }
       }
     },
-    "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {
+    "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
+        "projectUniqueName": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
         "projectName": "madera",
-        "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
+        "projectPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\madera.csproj",
         "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\obj\\",
+        "outputPath": "C:\\Users\\Seb\\source\\repos\\maderaTest\\madera\\madera\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -102,9 +110,17 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[1.2.0.223, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[1.5.1, )"
+=======
+              "version": "[1.5.2, )"
+>>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
             },
             "Xamarin.Forms": {
               "target": "Package",
