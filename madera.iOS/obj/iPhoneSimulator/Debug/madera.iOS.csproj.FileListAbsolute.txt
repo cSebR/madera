@@ -190,3 +190,12 @@ C:\Users\Seb\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\XamlC.stam
 C:\Users\Seb\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\madera.iOS.csproj.CopyComplete
 C:\Users\Seb\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\madera.iOS.exe
 C:\Users\Seb\source\repos\madera\madera.iOS\obj\iPhoneSimulator\Debug\madera.iOS.pdb
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.IOS.dll
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.IOS.pdb
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.dll
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\Rg.Plugins.Popup.pdb
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\SQLite-net.dll
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.core.dll
+C:\Users\Seb\source\repos\maderaTest\madera\madera.iOS\bin\iPhoneSimulator\Debug\SQLitePCLRaw.provider.sqlite3.dll
