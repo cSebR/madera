@@ -999,8 +999,6 @@ C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\adb.props
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\madera.Android.csprojAssemblyReference.cache
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
-C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\resourcepaths.cache
-C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\resourcecache.stamp
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\res.flag
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\flata\0B2F15F11A7BD594.stamp
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\flata\43C6D81E873E21AA.stamp
@@ -1456,7 +1454,6 @@ C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\app_shared_librarie
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\app_shared_libraries\x86\libxamarin-app.so
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\app_shared_libraries\x86_64\libxamarin-app.so
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\android\bin\classes.dex
-C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\stamp\_BuildAdditionalResourcesCache.stamp
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\stamp\_CleanIntermediateIfNuGetsChange.stamp
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\stamp\_CompileToDalvik.stamp
 C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp
@@ -1998,3 +1995,6 @@ C:\Users\Seb\source\repos\TestXamarin\madera.Android\obj\Debug\90\stamp\_Convert
 C:\Users\Seb\source\repos\TestXamarin\madera.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Seb\source\repos\TestXamarin\madera.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Seb\source\repos\TestXamarin\madera.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Seb\source\repos\madera\madera.Android\bin\Debug\com.companyname.madera.aab
+C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\madera.Android.csproj.CoreCompileInputs.cache
+C:\Users\Seb\source\repos\madera\madera.Android\obj\Debug\90\android\AndroidManifest.xml
