@@ -87,11 +87,7 @@
           "lib/netstandard2.0/System.Numerics.Vectors.dll": {}
         }
       },
-<<<<<<< HEAD
-      "Xamarin.Essentials/1.5.1": {
-=======
       "Xamarin.Essentials/1.5.2": {
->>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"

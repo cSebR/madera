@@ -55,11 +55,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-<<<<<<< HEAD
-              "version": "[1.5.1, )"
-=======
               "version": "[1.5.2, )"
->>>>>>> 55936edeebf94802eba96bd06801bb289b772f9a
             },
             "Xamarin.Forms": {
               "target": "Package",
