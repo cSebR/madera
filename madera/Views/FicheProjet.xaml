@@ -20,13 +20,17 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <!--<StackLayout Grid.Row="1">
-                    <Label Text="Profil"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-                </StackLayout>-->
+                <StackLayout>
+                    <Label Text="ID : "/>
+                    <Label x:Name="IDEntry"/>
 
-                <ListView  Grid.Row="1">
+                    <Label Text="Name : "/><Label Text="" x:Name="NameEntry"/>
+
+                    <Label Text="Date : "/>
+                    <Label Text="" x:Name="DateEntry"/>
+                </StackLayout>
+
+                <!--<ListView  ItemsSource="{Binding Projets}"  Grid.Row="1">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -36,7 +40,7 @@
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>
+                </ListView>-->
             </Grid>
         </Grid>
         

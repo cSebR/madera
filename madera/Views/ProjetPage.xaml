@@ -29,14 +29,16 @@
                              Margin="0,40,0,0"
                              WidthRequest="300"
                              HorizontalOptions="Center"
-                             Clicked="OnCreateProjetClicked"/>
+                             Clicked="OnCreateProjetClicked"
+                             BackgroundColor="Transparent"/>
                 
                 <ImageButton Grid.Row="1"
-                             Source="add_projet.png"
+                             Source="list_projet.png"
                              Margin="0,40,0,0"
                              WidthRequest="300"
                              HorizontalOptions="Center"
-                             Clicked="OnListProjectClicked"/>
+                             Clicked="OnListProjectClicked"
+                             BackgroundColor="Transparent"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

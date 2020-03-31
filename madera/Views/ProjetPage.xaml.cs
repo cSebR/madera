@@ -11,6 +11,7 @@ namespace madera.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjetPage : ContentPage
     {
+
         public ProjetPage()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace madera.Views
             var client = await DisplayActionSheet("Selectionner un client","Cancel", null, item);
             Debug.WriteLine("Client: " + client);
 
+
             //Popup Nom du projet
             string result = await DisplayPromptAsync("Entrer le nom du projet", "Nom du projet");
        
@@ -50,14 +52,16 @@ namespace madera.Views
             //Enregistrement en base
             if (!string.IsNullOrWhiteSpace(result))
             {
-
+                DateTime now = DateTime.Now;
                 await App.Database.SaveProjetAsync(new ProjetModel
                 {
                     Nom = result,
-                    Date = new DateTime(),
+                    Date = now,
+                    Ref = result + 1,
+                    Created_by = 1
                 });
 
-                //result = string.Empty;
+                Debug.WriteLine("Date : " + now); 
 
                 await Navigation.PushAsync(new ProjetList());
             }

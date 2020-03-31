@@ -5,8 +5,6 @@ public class MonoPackageManager_Resources {
 		"madera.Android.dll",
 		"FormsViewGroup.dll",
 		"madera.dll",
-		"Rg.Plugins.Popup.dll",
-		"Rg.Plugins.Popup.Droid.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
