@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\madera.csproj",
         "packagesPath": "C:\\Users\\Seb\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Seb\\source\\repos\\madera\\madera\\obj\\",
+=======
+    "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {}
+  },
+  "projects": {
+    "E:\\Workspace\\C#\\madera\\madera\\madera.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj",
+        "projectName": "madera",
+        "projectPath": "E:\\Workspace\\C#\\madera\\madera\\madera.csproj",
+        "packagesPath": "C:\\Users\\Axel\\.nuget\\packages\\",
+        "outputPath": "E:\\Workspace\\C#\\madera\\madera\\obj\\",
+>>>>>>> d1d54791d8a879c2cb0ced88b7d553ede92c3562
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Seb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Axel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -48,6 +62,10 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.2, )"
@@ -71,7 +89,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+>>>>>>> d1d54791d8a879c2cb0ced88b7d553ede92c3562
         }
       }
     }

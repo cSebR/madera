@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,10 +21,10 @@ namespace madera.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Profil, Title="Profil" },
-                new HomeMenuItem {Id = MenuItemType.Projet, Title="Projet" },
-                new HomeMenuItem {Id = MenuItemType.Client, Title="Client" },
-                new HomeMenuItem {Id = MenuItemType.Login, Title="Login" }
+                new HomeMenuItem { Id = MenuItemType.Profil, Title="Profil" },
+                new HomeMenuItem { Id = MenuItemType.Projet, Title="Projet" },
+                new HomeMenuItem { Id = MenuItemType.Client, Title="Client" },
+                new HomeMenuItem { Id = MenuItemType.Deconnexion, Title="Déconnexion"}
 
             };
 
@@ -36,7 +37,16 @@ namespace madera.Views
                     return;
 
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
-                await RootPage.NavigateFromMenu(id);
+
+                if( ( (HomeMenuItem)e.SelectedItem ).Id == MenuItemType.Deconnexion )
+                {
+                    SecureStorage.RemoveAll();
+                    Application.Current.MainPage = new LoginPage();
+                }
+                else
+                {
+                    await RootPage.NavigateFromMenu(id);
+                }
             };
         }
     }
