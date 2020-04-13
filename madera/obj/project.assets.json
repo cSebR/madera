@@ -87,7 +87,7 @@
           "lib/netstandard2.0/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.5.0.495": {
+      "Xamarin.Forms/4.5.0.617": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
@@ -100,8 +100,8 @@
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
         },
         "build": {
-          "build/Xamarin.Forms.props": {},
-          "build/Xamarin.Forms.targets": {}
+          "buildTransitive/Xamarin.Forms.props": {},
+          "buildTransitive/Xamarin.Forms.targets": {}
         }
       }
     }
@@ -434,10 +434,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.5.0.495": {
-      "sha512": "ipufpdjFh+YHHw1E3I+8FIQWk1KmlB77PSHg32YRnuBSCUNEHjoMnvEmY9YCK4DTWfOenV0HHZVvGjB9qDtI9w==",
+    "Xamarin.Forms/4.5.0.617": {
+      "sha512": "tB/h7bHEylOgNT+521SRnbmO+LCe5R3lPboD/icCMpa+FdjmxhZQ7+fIIPFDbhY2dqYetGRnAeJWXVx4NLbmAw==",
       "type": "package",
-      "path": "xamarin.forms/4.5.0.495",
+      "path": "xamarin.forms/4.5.0.617",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -468,6 +468,33 @@
         "build/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
         "build/netstandard2.0/Xamarin.Forms.Core.dll",
         "build/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "buildTransitive/MonoAndroid10/proguard.cfg",
+        "buildTransitive/XCODE10/Xamarin.Forms.Platform.iOS.dll",
+        "buildTransitive/XCODE10/Xamarin.Forms.Platform.iOS.pdb",
+        "buildTransitive/XCODE10/Xamarin.Forms.Platform.macOS.dll",
+        "buildTransitive/XCODE11/Xamarin.Forms.Platform.iOS.dll",
+        "buildTransitive/XCODE11/Xamarin.Forms.Platform.iOS.pdb",
+        "buildTransitive/XCODE11/Xamarin.Forms.Platform.macOS.dll",
+        "buildTransitive/Xamarin.Forms.DefaultItems.props",
+        "buildTransitive/Xamarin.Forms.DefaultItems.targets",
+        "buildTransitive/Xamarin.Forms.props",
+        "buildTransitive/Xamarin.Forms.targets",
+        "buildTransitive/net46/Mono.Cecil.Mdb.dll",
+        "buildTransitive/net46/Mono.Cecil.Pdb.dll",
+        "buildTransitive/net46/Mono.Cecil.Rocks.dll",
+        "buildTransitive/net46/Mono.Cecil.dll",
+        "buildTransitive/net46/System.ValueTuple.dll",
+        "buildTransitive/net46/Xamarin.Forms.Build.Tasks.dll",
+        "buildTransitive/net46/Xamarin.Forms.Core.dll",
+        "buildTransitive/net46/Xamarin.Forms.Xaml.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.Mdb.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.Pdb.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.Rocks.dll",
+        "buildTransitive/netstandard2.0/Mono.Cecil.dll",
+        "buildTransitive/netstandard2.0/System.CodeDom.dll",
+        "buildTransitive/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
+        "buildTransitive/netstandard2.0/Xamarin.Forms.Core.dll",
+        "buildTransitive/netstandard2.0/Xamarin.Forms.Xaml.dll",
         "lib/MonoAndroid10.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10.0/FormsViewGroup.dll",
@@ -715,7 +742,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.5.0.495.nupkg.sha512",
+        "xamarin.forms.4.5.0.617.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     }
@@ -724,7 +751,7 @@
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.5.2",
-      "Xamarin.Forms >= 4.5.0.495",
+      "Xamarin.Forms >= 4.5.0.617",
       "sqlite-net-pcl >= 1.6.292"
     ]
   },
@@ -782,7 +809,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.5.0.495, )"
+            "version": "[4.5.0.617, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

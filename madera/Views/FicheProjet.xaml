@@ -8,48 +8,33 @@
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Fiche Projet">
     <ContentPage.Content>
+        <Grid Margin="300,50,30,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+            </Grid.RowDefinitions>
+
+
+            <Label Text="Clients" TextColor="White"/>
+            <Label Text="ID : " Grid.Row="1" TextColor="White"/>
+            <Label Text="Name : " Grid.Row="2" TextColor="White"/>
+            <Label Text="Date : " Grid.Row="3" TextColor="White"/>
 
 
 
-        <Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+            <Label Text="Projet" Grid.Column="1" TextColor="White"/>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Label x:Name="IDEntry" Grid.Row="1" Grid.Column="1" TextColor="White"/>
+            <Label x:Name="NameEntry" Grid.Row="2" Grid.Column="1" TextColor="White"/>
+            <Label x:Name="DateEntry" Grid.Row="3" Grid.Column="1" TextColor="White"/>
 
-
-                <StackLayout>
-                    <Label Text="ID : "/>
-                    <Label x:Name="IDEntry"/>
-
-                    <Label Text="Name : "/>
-                    <Label Text="" x:Name="NameEntry"/>
-
-                    <Label Text="Date : "/>
-                    <Label Text="" x:Name="DateEntry"/>
-                </StackLayout>
-
-
-
-                <!--<ListView  ItemsSource="{Binding Projets}"  Grid.Row="1">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout Orientation="Vertical">
-                                    <Label Text="" />
-                                </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>-->
-            </Grid>
         </Grid>
-
     </ContentPage.Content>
 </ContentPage>

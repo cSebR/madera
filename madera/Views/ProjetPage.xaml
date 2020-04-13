@@ -16,13 +16,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <!--<ListView ItemsSource="{Binding Projets}" Grid.Row="1">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextCell Text="{Binding Nom}"/>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>-->
+               
 
                 <ImageButton Grid.Row="0"
                              Source="add_projet.png"
