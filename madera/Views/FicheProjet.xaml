@@ -8,8 +8,10 @@
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Fiche Projet">
     <ContentPage.Content>
-        <Grid Margin="300,50,30,30">
+        <Grid Margin="100,50,30,30">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
                 <ColumnDefinition Width="0.5*" />
                 <ColumnDefinition Width="0.5*" />
             </Grid.ColumnDefinitions>
@@ -19,22 +21,40 @@
                 <RowDefinition Height="20" />
                 <RowDefinition Height="20" />
                 <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="20" />
             </Grid.RowDefinitions>
 
 
-            <Label Text="Clients" TextColor="White"/>
-            <Label Text="ID : " Grid.Row="1" TextColor="White"/>
-            <Label Text="Name : " Grid.Row="2" TextColor="White"/>
-            <Label Text="Date : " Grid.Row="3" TextColor="White"/>
+            <Image Grid.RowSpan="2" Grid.Column="0"
+                    Source="client_projet.png"
+                    HeightRequest="60"
+                    WidthRequest="60" 
+                    BackgroundColor="Transparent"/>
+            <Label Text="Client" TextColor="White" Grid.Column="1"/>
+            <Label Text="ID : " Grid.Row="1"  Grid.Column="1" TextColor="White"/>
+            <Label Text="Name : " Grid.Row="2"  Grid.Column="1" TextColor="White"/>
+            <Label Text="Date : " Grid.Row="3"  Grid.Column="1" TextColor="White"/>
 
 
 
-            <Label Text="Projet" Grid.Column="1" TextColor="White"/>
+            <Image Grid.RowSpan="2" Grid.Column="2" 
+                    Source="projet.png"
+                    HeightRequest="60"
+                    WidthRequest="60" 
+                    BackgroundColor="Transparent"/>
+            <Label Text="Projet" Grid.Column="3" TextColor="White"/>
 
-            <Label x:Name="IDEntry" Grid.Row="1" Grid.Column="1" TextColor="White"/>
-            <Label x:Name="NameEntry" Grid.Row="2" Grid.Column="1" TextColor="White"/>
-            <Label x:Name="DateEntry" Grid.Row="3" Grid.Column="1" TextColor="White"/>
+            <Label x:Name="IDEntry" Grid.Row="1" Grid.Column="3" TextColor="White"/>
+            <Label x:Name="NameEntry" Grid.Row="2" Grid.Column="3" TextColor="White"/>
+            <Label x:Name="DateEntry" Grid.Row="3" Grid.Column="3" TextColor="White"/>
 
+            <ImageButton Grid.Row="6"
+                    HeightRequest="300"
+                    WidthRequest="300" 
+                    Source="creer_plan.png"
+                    BackgroundColor="Transparent"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

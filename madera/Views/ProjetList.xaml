@@ -8,15 +8,32 @@
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Liste Projet">
     <ContentPage.Content>
-        <Grid Margin="200,50,200,200">
+        <Grid Margin="200,40,200,200">
             <ListView ItemsSource="{Binding Projets}" ItemTapped="MainListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Vertical"  >
-
-                                <Label Text="{Binding Nom}" TextColor="White"  />
-                            </StackLayout>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="2"
+                                   Source="projet.png"
+                                   HeightRequest="30"
+                                   WidthRequest="30" 
+                                       BackgroundColor="Transparent"/>
+                                <Label Grid.Column="1" 
+                                   Text="{Binding Nom}"
+                                   FontAttributes="Bold" 
+                                       TextColor="White"/>
+                                        
+                            </Grid>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
