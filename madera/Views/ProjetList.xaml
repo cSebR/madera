@@ -26,11 +26,11 @@
                                    Source="projet.png"
                                    HeightRequest="30"
                                    WidthRequest="30" 
-                                       BackgroundColor="Transparent"/>
+                                   BackgroundColor="Transparent"/>
                                 <Label Grid.Column="1" 
                                    Text="{Binding Nom}"
                                    FontAttributes="Bold" 
-                                       TextColor="White"/>
+                                   TextColor="White"/>
                                         
                             </Grid>
                             
