@@ -8,18 +8,31 @@
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="List_Client">
     <ContentPage.Content>
-        <StackLayout>
-            
+        <Grid>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <ListView x:Name="listView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Nom}"
-                              Detail="{Binding Prenom}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                
             
-        </StackLayout>
+                <ListView ItemsSource="{Binding Clients}" ItemTapped="MainListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                       
+                                <TextCell Text="{Binding Nom}"
+                                  Detail="{Binding Prenom}" />
+
+                       
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
