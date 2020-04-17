@@ -43,7 +43,7 @@ namespace madera.Views
             Debug.WriteLine("Nom : " + Selected.Nom);
             Debug.WriteLine("Date : " + Selected.Date);*/
 
-            await Navigation.PushAsync(new FicheProjet(Selected.ID,Selected.Nom,Selected.Date));
+            await Navigation.PushAsync(new FicheProjet(Selected.Nom,Selected.Date));
         }
     }
 }

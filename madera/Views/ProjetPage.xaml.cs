@@ -1,5 +1,6 @@
 ﻿using madera.Models;
 using madera.ViewModels;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -25,10 +26,15 @@ namespace madera.Views
             ((ProjetViewModel)this.BindingContext).Init();
         }
 
-        void OnItemClicked(object sender, EventArgs e)
+        /*void OnItemClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
 
+        }*/
+
+        private void PopupSelectClient(object o, EventArgs e)
+        {
+            PopupNavigation.Instance.PushAsync(new PopupViewClient());
         }
 
 

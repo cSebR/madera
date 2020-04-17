@@ -14,11 +14,11 @@ namespace madera.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FicheProjet : ContentPage
     {
-        public FicheProjet(int ID, string Nom, string Date)
+        public FicheProjet(string Nom, string Date)
         {
             InitializeComponent();
             BindingContext = new ProjetViewModel();
-            IDEntry.Text = ID.ToString();
+            //IDEntry.Text = ID.ToString();
             NameEntry.Text = Nom;
             DateEntry.Text = Date.ToString();
 
