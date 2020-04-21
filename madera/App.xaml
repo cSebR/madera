@@ -8,15 +8,14 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Color x:Key="Navbar">#212121</Color>
-            <Color x:Key="NavbarText">#FF9500</Color>
+            <Color x:Key="Orange">#FF9500</Color>
             <Color x:Key="Btn">#AA9580</Color>
             <Color x:Key="InputTrans">#70FBC1BC</Color>
             
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Navbar}" />
+                <Setter Property="BarTextColor" Value="{StaticResource Orange}" />
             </Style>
             
             <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeBrands">
