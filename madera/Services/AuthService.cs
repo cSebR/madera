@@ -44,9 +44,9 @@ namespace madera.Services
          * @param Utilisateur utilisateur
          * @return Task<HttpStatusCode>
          */
-        public async Task<HttpStatusCode> Login(Utilisateur utilisateur)
+        public async Task<HttpStatusCode> Login(AuthModel authModel)
         {
-            var json    = JsonConvert.SerializeObject(utilisateur);
+            var json    = JsonConvert.SerializeObject(authModel);
             var content = new StringContent( json , Encoding.UTF8, "application/json");
             var uri     = new Uri( BaseUri, "login" );
 
@@ -59,7 +59,7 @@ namespace madera.Services
 
                 try
                 {
-                    await SecureStorage.SetAsync("password", utilisateur.Password);
+                    await SecureStorage.SetAsync("password", authModel.utilisateur_password);
                     await SecureStorage.SetAsync("token", jsonData["data"]["token"].ToString());
                     await SecureStorage.SetAsync("user", jsonData["data"]["user"].ToString());
                 }
