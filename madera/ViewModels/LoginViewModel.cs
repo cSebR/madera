@@ -133,8 +133,8 @@ namespace madera.ViewModels
                     {
                         Utilisateur user = new Utilisateur
                         {
-                            utilisateur_email    = _utilisateur_email,
-                            utilisateur_password = _utilisateur_password
+                            Email = _utilisateur_email,
+                            Password = _utilisateur_password
                         };
 
                         /**

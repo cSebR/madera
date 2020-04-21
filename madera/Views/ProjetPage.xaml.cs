@@ -61,7 +61,7 @@ namespace madera.Views
 
                 //result = string.Empty;
 
-                await Navigation.PushAsync(new ProjetList());
+                //await Navigation.PushAsync(new ProjetList());
             }
         }
 
@@ -69,7 +69,7 @@ namespace madera.Views
         {
             base.OnAppearing();
 
-            await Navigation.PushAsync(new ProjetList());
+            //await Navigation.PushAsync(new ProjetList());
         }
 
     }

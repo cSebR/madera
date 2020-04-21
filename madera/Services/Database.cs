@@ -8,13 +8,21 @@ namespace madera.Services
 {
     public class Database
     {
-        readonly SQLiteAsyncConnection _database;
+        public readonly SQLiteAsyncConnection _database;
 
         public Database(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<Role>().Wait();
+            _database.CreateTableAsync<Utilisateur>().Wait();
             _database.CreateTableAsync<ClientModel>().Wait();
 			_database.CreateTableAsync<ProjetModel>().Wait();
+            _database.CreateTableAsync<Devis>().Wait();
+            _database.CreateTableAsync<Remise>().Wait();
+            _database.CreateTableAsync<DossierTechnique>().Wait();
+            _database.CreateTableAsync<TypeEtat>().Wait();
+            _database.CreateTableAsync<Plan>().Wait();
+            _database.CreateTableAsync<Module>().Wait();
         }
 
         public Task<List<ClientModel>> GetPeopleAsync()

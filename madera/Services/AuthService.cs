@@ -59,13 +59,13 @@ namespace madera.Services
 
                 try
                 {
-                    await SecureStorage.SetAsync("password", utilisateur.utilisateur_password);
+                    await SecureStorage.SetAsync("password", utilisateur.Password);
                     await SecureStorage.SetAsync("token", jsonData["data"]["token"].ToString());
                     await SecureStorage.SetAsync("user", jsonData["data"]["user"].ToString());
                 }
-                catch( Exception e )
+                catch
                 {
-
+                    // TODO: Gestion des erreurs en cas de non accès du dossier en écriture
                 }
             }
             return response.StatusCode;

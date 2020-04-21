@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="madera.Views.PlanHome">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Button Text="Ajouter un module" 
+                        Grid.Row="0"
+                        Style="{StaticResource buttonStyle}" />
+
+                <Button Text="Ajouter un sas de liaison"
+                        Grid.Row="1"
+                        Style="{StaticResource buttonStyle}" />
+
+                <StackLayout Grid.Row="2" VerticalOptions="End">
+                    <Button Text="Enregistrer" 
+                        Grid.Row="0"
+                        Style="{StaticResource buttonStyle}" />
+
+                    <Button Text="Annuler"
+                        Grid.Row="1"
+                        Style="{StaticResource buttonStyle}" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
