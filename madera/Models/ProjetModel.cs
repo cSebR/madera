@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
-
+using SQLiteNetExtensions.Attributes;
 
 namespace madera.Models
 {
@@ -18,6 +18,24 @@ namespace madera.Models
         public override string ToString()
         {
             return Nom;
+        }
+
+        [ForeignKey(typeof(ClientModel))]
+        public int ClientId { get; set;}
+
+        [ManyToOne]
+        public ClientModel Client { get; set; }
+
+        public string ClientNom
+        {
+            get
+            {
+                if (Client != null)
+                {
+                    return Client.Nom;
+                }
+                return "";
+            }
         }
 
     }

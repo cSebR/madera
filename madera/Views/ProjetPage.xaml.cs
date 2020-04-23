@@ -38,7 +38,7 @@ namespace madera.Views
         }
 
 
-        async void OnCreateProjetClicked(object sender, EventArgs e)
+        /*async void OnCreateProjetClicked(object sender, EventArgs e)
         {
             base.OnAppearing();
 
@@ -68,7 +68,7 @@ namespace madera.Views
                 await Navigation.PushAsync(new ProjetList());
             }
             
-        }
+        }*/
 
         async void OnListProjectClicked(object sender, EventArgs e)
         {

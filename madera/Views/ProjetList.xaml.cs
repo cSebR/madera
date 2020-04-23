@@ -28,22 +28,22 @@ namespace madera.Views
 
         }
 
-        void OnItemClicked(object sender, EventArgs e)
+        /*void OnItemClicked(object sender, EventArgs e)
         {
             ToolbarItem item = (ToolbarItem)sender;
 
-        }
+        }*/
 
         /* retour sur la fiche projet du client */
 
         async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var Selected = e.Item as ProjetModel;
-            /*Debug.WriteLine("Id: " + Selected.ID);
-            Debug.WriteLine("Nom : " + Selected.Nom);
+            Debug.WriteLine("Id: " + Selected.ClientId);
+            /*Debug.WriteLine("Nom : " + Selected.Nom);
             Debug.WriteLine("Date : " + Selected.Date);*/
 
-            await Navigation.PushAsync(new FicheProjet(Selected.Nom,Selected.Date));
+            await Navigation.PushAsync(new FicheProjet(Selected.Nom,Selected.Date,Selected.ClientId));
         }
     }
 }

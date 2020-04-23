@@ -27,11 +27,10 @@
                                    HeightRequest="30"
                                    WidthRequest="30" 
                                    BackgroundColor="Transparent"/>
-                                <Label Grid.Column="1" 
+                                <Label Grid.Column="1"  
                                    Text="{Binding Nom}"
                                    FontAttributes="Bold" 
                                    TextColor="White"/>
-                                        
                             </Grid>
                             
                         </ViewCell>
