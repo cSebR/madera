@@ -34,12 +34,7 @@
                     BackgroundColor="Transparent"/>
             <Label Text="Client" TextColor="White" Grid.Column="1"/>
             <Label x:Name="ClientIdEntry" Grid.Row="1"  Grid.Column="1" TextColor="White"/>
-            <!--<Label x:Name="NameEntry" Grid.Row="1"  Grid.Column="1" TextColor="White"/>
-            <Label x:Name="DateEntry" Grid.Row="2"  Grid.Column="1" TextColor="White"/>-->
-            <Label Text="Date : " Grid.Row="3"  Grid.Column="1" TextColor="White"/>
-
-
-
+            <Label x:Name="ClientNameEntry" Grid.Row="2"  Grid.Column="1" TextColor="White"/>
             <Image Grid.RowSpan="2" Grid.Column="2" 
                     Source="projet.png"
                     HeightRequest="60"
@@ -47,9 +42,9 @@
                     BackgroundColor="Transparent"/>
             <Label Text="Projet" Grid.Column="3" TextColor="White"/>
 
-            <Label x:Name="IDEntry" Grid.Row="1" Grid.Column="3" TextColor="White"/>
-            <Label x:Name="NameEntry" Grid.Row="2" Grid.Column="3" TextColor="White"/>
-            <Label x:Name="DateEntry" Grid.Row="3" Grid.Column="3" TextColor="White"/>
+            <Label x:Name="ProjetIDEntry" Grid.Row="1" Grid.Column="3" TextColor="White"/>
+            <Label x:Name="ProjetNameEntry" Grid.Row="2" Grid.Column="3" TextColor="White"/>
+            <Label x:Name="ProjetDateEntry" Grid.Row="3" Grid.Column="3" TextColor="White"/>
 
 
 

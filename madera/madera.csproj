@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -14,8 +14,14 @@
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.2" />
     <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
     <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />  
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />  
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\PopupView.xaml.cs">
+      <DependentUpon>PopupView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -31,10 +37,7 @@
     <EmbeddedResource Update="Views\NewItemPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\PopupViewClient.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\PopupViewProjet.xaml">
+    <EmbeddedResource Update="Views\PopupView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ProfilPage.xaml">

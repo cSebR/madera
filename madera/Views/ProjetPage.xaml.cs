@@ -34,7 +34,7 @@ namespace madera.Views
 
         private void PopupSelectClient(object o, EventArgs e)
         {
-            PopupNavigation.Instance.PushAsync(new PopupViewClient());
+            PopupNavigation.Instance.PushAsync(new PopupView());
         }
 
 
