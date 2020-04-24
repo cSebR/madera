@@ -24,6 +24,11 @@
                 <RowDefinition Height="20" />
                 <RowDefinition Height="20" />
                 <RowDefinition Height="20" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="80" />
             </Grid.RowDefinitions>
 
 
@@ -46,14 +51,30 @@
             <Label x:Name="ProjetNameEntry" Grid.Row="2" Grid.Column="3" TextColor="White"/>
             <Label x:Name="ProjetDateEntry" Grid.Row="3" Grid.Column="3" TextColor="White"/>
 
-
-
-
-            <ImageButton Grid.Row="6"
+            <Label Text="Plan" Grid.Row="6" TextColor="White"/>
+            <ImageButton Grid.Row="7"
                     HeightRequest="300"
                     WidthRequest="300" 
                     Source="creer_plan.png"
-                    BackgroundColor="Transparent"/>
+                    BackgroundColor="Transparent"
+                   />
+            <Label Text="Devis" Grid.Row="8" TextColor="White"/>
+            <ImageButton Grid.Row="9"
+                    HeightRequest="300"
+                    WidthRequest="300" 
+                    Source="devis.png"
+                    BackgroundColor="Transparent"
+                    />
+            <Label Text="Dossier Technique" Grid.Row="10" TextColor="White"/>
+            <ImageButton Grid.Row="11"
+                    HeightRequest="300"
+                    WidthRequest="300" 
+                    Source="devis.png"
+                    BackgroundColor="Transparent"
+                   />
+
+
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>
