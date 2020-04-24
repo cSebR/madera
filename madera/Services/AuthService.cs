@@ -1,6 +1,5 @@
 ﻿using madera.Models;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -8,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using Newtonsoft.Json.Linq;
 
 namespace madera.Services
 {
@@ -55,13 +55,23 @@ namespace madera.Services
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadAsStringAsync();
-                var jsonData = (JObject)JsonConvert.DeserializeObject(result);
+                JObject jsonData = (JObject)JsonConvert.DeserializeObject(result);
 
                 try
                 {
-                    await SecureStorage.SetAsync("password", authModel.utilisateur_password);
+                    /**
+                     * L'API PHP ne contient pas le prénom et nom de l'utilisateur
+                     */
+                    Utilisateur utilisateur = new Utilisateur
+                    {
+                        Id = (long) jsonData["data"]["user"]["utilisateur_id"],
+                        Email = (string) jsonData["data"]["user"]["utilisateur_email"],
+                        Nom = "Loutre",
+                        Prenom = "Patrick"
+                    };
+
                     await SecureStorage.SetAsync("token", jsonData["data"]["token"].ToString());
-                    await SecureStorage.SetAsync("user", jsonData["data"]["user"].ToString());
+                    await SecureStorage.SetAsync("user", JsonConvert.SerializeObject(utilisateur));
                 }
                 catch
                 {
@@ -69,6 +79,42 @@ namespace madera.Services
                 }
             }
             return response.StatusCode;
+        }
+
+        //--------------------------------------------------------------------
+
+        /**
+         * Retourne l'utilisateur authentifié
+         */
+        public async Task<Utilisateur> GetUtilisateurAsync()
+        {
+            try
+            {
+                string json = await SecureStorage.GetAsync("user");
+                return JsonConvert.DeserializeObject<Utilisateur>(json);
+            } catch
+            {
+                // TODO: Gestion des erreurs en cas de non accès au dossier en lecture
+                return null;
+            }
+        }
+
+        //--------------------------------------------------------------------
+
+        /**
+         * Retourne le token de l'utilisateur authentifié
+         */
+         public async Task<string> GetTokenAsync()
+         {
+            try
+            {
+                return await SecureStorage.GetAsync("token");
+            }
+            catch
+            {
+                // TODO: Gestion des erreurs en cas de non accès au dossier en lecture
+                return null;
+            }
         }
     }
 }
