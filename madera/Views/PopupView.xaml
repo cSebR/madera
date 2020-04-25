@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                x:Class="madera.Views.PopupView"
+                BackgroundImageSource="BackGroud_Portrait_2.jpg">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation DurationIn="200"
+                                   DurationOut="100"
+                                   EasingIn="SinOut"
+                                   EasingOut="SinIn"
+                                   HasBackgroundAnimation="True"
+                                   PositionIn="Center"
+                                   PositionOut="Center"
+                                   ScaleIn="1.2"
+                                   ScaleOut="0.8"
+                                   />
+    </pages:PopupPage.Animation>
+    <!--  You can use any elements here which are extended from Xamarin.Forms.View  -->
+    <StackLayout Margin="12"
+                 Padding="24"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+
+        <Label x:Name="currentSelectedItemLabel"
+                   Grid.Row="1"
+                   Grid.Column="1" IsVisible="False" />
+
+
+        <CollectionView ItemsSource="{Binding Clients}"
+                        SelectionMode="Single"
+                        SelectionChanged="OnCollectionViewSelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="1" 
+                               Text="{Binding ID}" 
+                               FontAttributes="Bold"
+                               />
+                        <Label Grid.Column="2" 
+                               Text="{Binding FullName}" 
+                               FontAttributes="Bold"
+                               />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+        <Label Text="Nom du projet" />
+        <Entry x:Name="NomProjet" Placeholder="Entrer nom du projet " Keyboard="Text" />
+        <Label x:Name="ErrorLabel" TextColor="Red"/>
+
+        <Button BackgroundColor="Gray"
+                FontSize="30"
+                x:Name="BtnSave"
+                Clicked="BtnSave_Clicked"
+                Text="Enregistrer"
+                TextColor="White" />
+        <Button BackgroundColor="Gray"
+                FontSize="30"
+                x:Name="BtnClose"
+                Clicked="BtnClose_Clicked"
+                Text="Annuler"
+                TextColor="White" />
+
+    </StackLayout>
+</pages:PopupPage>
