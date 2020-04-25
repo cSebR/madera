@@ -1,5 +1,8 @@
-﻿using System;
+﻿using madera.Models;
+using madera.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,12 +18,20 @@ namespace madera.Views
         public ClientList()
         {
             InitializeComponent();
+            this.BindingContext = new ClientViewModel();
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            listView.ItemsSource = await App.Database.GetPeopleAsync();
+            ((ClientViewModel)this.BindingContext).Init();
+        }
+
+        async private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var Selected = e.Item as ClientModel;
+
+            await Navigation.PushAsync(new FicheClient(Selected));
         }
     }
 }

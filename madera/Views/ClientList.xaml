@@ -9,17 +9,16 @@
              Title="List_Client">
     <ContentPage.Content>
         <StackLayout>
-            
-
-            <ListView x:Name="listView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextCell Text="{Binding Nom}"
-                              Detail="{Binding Prenom}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
+            <ScrollView>
+                <ListView HeightRequest ="800" ItemsSource="{Binding Clients}" ItemTapped="MainListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding FullName}"
+                              Detail="{Binding Ville}" ImageSource="client.png" TextColor ="white"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
