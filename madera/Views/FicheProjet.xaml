@@ -73,8 +73,6 @@
                     BackgroundColor="Transparent"
                    />
 
-
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
