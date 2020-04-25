@@ -31,10 +31,7 @@ namespace madera.Views
         {
             var Selected = e.Item as ClientModel;
 
-            Debug.WriteLine("Nom : " + Selected.Nom);
-            Debug.WriteLine("Date : " + Selected.Prenom);
-
-            await Navigation.PushAsync(new FicheClient(Selected.Nom, Selected.Prenom));
+            await Navigation.PushAsync(new FicheClient(Selected));
         }
     }
 }
