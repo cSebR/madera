@@ -1,19 +1,19 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using madera.Views.PopupViews;
-using Rg.Plugins.Popup.Services;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace madera.Views
+namespace madera.Views.PopupViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PlanHome : ContentPage
+    public partial class CoupePrincipeModule : PopupPage
     {
-        public PlanHome()
+        public CoupePrincipeModule()
         {
             InitializeComponent();
         }

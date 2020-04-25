@@ -1,21 +1,23 @@
-﻿using System;
+﻿using madera.ViewModels;
+using Rg.Plugins.Popup.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using madera.Views.PopupViews;
-using Rg.Plugins.Popup.Services;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace madera.Views
+namespace madera.Views.PopupViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PlanHome : ContentPage
+    public partial class ModulePage : PopupPage
     {
-        public PlanHome()
+        public ModulePage(PlanHomeViewModel planHomeViewModel)
         {
             InitializeComponent();
+            this.BindingContext = planHomeViewModel;
         }
     }
 }
