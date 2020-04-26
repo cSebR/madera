@@ -11,6 +11,12 @@
         <views:MenuPage />
     </MasterDetailPage.Master>
 
+    <MasterDetailPage.Resources>
+        <ResourceDictionary>
+            <!-- <BooleanToVisibilityConverter x:Key="BoolVisibilityConverter"/> -->
+        </ResourceDictionary>
+    </MasterDetailPage.Resources>
+
     <MasterDetailPage.Detail>
         <NavigationPage>
             <NavigationPage.Icon>
@@ -19,9 +25,9 @@
                 </OnPlatform>
             </NavigationPage.Icon>
             <x:Arguments>
-                <views:LoginPage />
+                <views:ProfilPage />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
-    
+
 </MasterDetailPage>
