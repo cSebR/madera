@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using madera.Models;
 using SQLite;
+using SQLiteNetExtensionsAsync.Extensions;
 
 namespace madera.Services
 {
@@ -18,21 +19,19 @@ namespace madera.Services
         }
 
         public Task<List<ClientModel>> GetPeopleAsync()
-
         {
             return _database.Table<ClientModel>().ToListAsync();
         }
 
         public Task<List<ProjetModel>> GetProjetAsync()
         {
-            return _database.Table<ProjetModel>().ToListAsync();
+            return _database.GetAllWithChildrenAsync<ProjetModel>();
         }
 
         public Task<int> SaveProjetAsync(ProjetModel projet)
         {
             return _database.InsertAsync(projet);
         }
-
 
         public Task<int> SaveClientAsync(ClientModel client)
         {
