@@ -6,7 +6,9 @@ using System.Text;
 
 namespace madera.Models
 {
-    public class ClientModel
+   
+    public partial class ClientModel
+
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
@@ -35,6 +37,7 @@ namespace madera.Models
                 return Nom.ToUpper() + " " + Prenom;
             }
         }
+
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<ProjetModel> Projets { get; set; }

@@ -3,9 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:madera.ViewModels"
+             xmlns:custom="clr-namespace:madera.Custom"
              mc:Ignorable="d"
              x:Class="madera.Views.LoginPage"
-             Title="Login">
+            Title="{Binding Title}"
+            BackgroundImageSource="bg_login.jpg">
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="label_identifiant"></Label>
