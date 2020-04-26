@@ -29,7 +29,7 @@ namespace madera.Models
             {
                 if (Client != null)
                 {
-                    return Client.Nom;
+                    return Client.FullName;
                 }
                 return "";
             }

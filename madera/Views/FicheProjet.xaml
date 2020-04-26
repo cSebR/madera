@@ -40,6 +40,7 @@
             <Label Text="Client" TextColor="White" Grid.Column="1"/>
             <Label x:Name="ClientIdEntry" Grid.Row="1"  Grid.Column="1" TextColor="White"/>
             <Label x:Name="ClientNameEntry" Grid.Row="2"  Grid.Column="1" TextColor="White"/>
+            
             <Image Grid.RowSpan="2" Grid.Column="2" 
                     Source="projet.png"
                     HeightRequest="60"

@@ -21,6 +21,7 @@ namespace madera.Views
 
             ClientIdEntry.Text = projet.ClientId.ToString();
             ClientNameEntry.Text = projet.ClientNom;
+            
 
             ProjetIDEntry.Text = projet.ID.ToString();
             ProjetNameEntry.Text = projet.Nom;
