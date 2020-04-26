@@ -132,7 +132,7 @@ namespace madera.ViewModels
                 {
                     _login = new Command(async () =>
                     {
-                        Utilisateur user = new Utilisateur
+                        AuthModel authModel = new AuthModel
                         {
                             utilisateur_email = _utilisateur_email,
                             utilisateur_password = _utilisateur_password
@@ -142,7 +142,7 @@ namespace madera.ViewModels
                          * Authentification de l'utilisateur via API
                          * Retourne le code HTTP
                          */
-                        HttpStatusCode status = await _serviceAuth.Login(user);
+                        HttpStatusCode status = await _serviceAuth.Login(authModel);
 
                         switch (status)
                         {

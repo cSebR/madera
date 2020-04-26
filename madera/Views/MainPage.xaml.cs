@@ -37,6 +37,9 @@ namespace madera.Views
                     case (int)MenuItemType.Client:
                         MenuPages.Add(id, new NavigationPage(new ClientPage()));
                         break;
+                    case (int)MenuItemType.Plan:
+                        MenuPages.Add(id, new NavigationPage(new PlanHome()));
+                        break;
                 }
             }
 

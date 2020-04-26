@@ -26,8 +26,6 @@ namespace madera
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new LoginPage();
         }
 

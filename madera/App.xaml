@@ -8,13 +8,47 @@
 
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Color x:Key="Navbar">#212121</Color>
+            <Color x:Key="Orange">#FF9500</Color>
             <Color x:Key="Btn">#AA9580</Color>
             <Color x:Key="InputTrans">#70FBC1BC</Color>
+            <Color x:Key="BgPopup">#E8E5E0</Color>
+            <Color x:Key="BgBtnCancel">#B9BED1</Color>
+            <Color x:Key="BgBtnSave">#668341</Color>
+            <Color x:Key="Green">#668341</Color>
+            <Color x:Key="BorderBtn">#E8E5E0</Color>
+            <Color x:Key="BorderPopup">#668341</Color>
+
+            <Style x:Key="btnOther" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Green}" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="{StaticResource Green}"/>
+            </Style>
+
+            <Style x:Key="btnSave" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BgBtnSave}" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="{StaticResource BorderBtn}"/>
+            </Style>
+            
+            <Style x:Key="btnCancel" TargetType="Button">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BgBtnCancel}" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="{StaticResource BorderBtn}"/>
+            </Style>
 
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
-                <Setter Property="BarTextColor" Value="White" />
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Navbar}" />
+                <Setter Property="BarTextColor" Value="{StaticResource Orange}" />
             </Style>
 
             <OnPlatform x:TypeArguments="x:String" x:Key="FontAwesomeBrands">

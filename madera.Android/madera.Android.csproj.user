@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>tablet_m-dpi_10_1in_pie_9_0_-_api_28</SelectedDevice>
     <DefaultDevice>tablet_m-dpi_10_1in_pie_9_0_-_api_28</DefaultDevice>
+    <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

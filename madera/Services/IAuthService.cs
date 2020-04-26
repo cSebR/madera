@@ -9,6 +9,6 @@ namespace madera.Services
 {
     public interface IAuthService
     {
-        Task<HttpStatusCode> Login(Utilisateur utilisateur);
+        Task<HttpStatusCode> Login(AuthModel authModel);
     }
 }

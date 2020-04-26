@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="madera.Views.PlanHome"
+             xmlns:vm="clr-namespace:madera.ViewModels"
+             BackgroundImageSource="BackGroud_Portrait_2.jpg"
+             Title="Plan"
+             x:Name="ModuleContentPage">
+
+    <ContentPage.BindingContext>
+        <vm:PlanHomeViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Button Text="Ajouter un module" 
+                        Grid.Row="0"
+                        Style="{StaticResource btnOther}"
+                        Command="{Binding BtnModule}"
+                        Margin="0,10,0,0"/>
+
+                <Button Text="Ajouter un sas de liaison"
+                        Grid.Row="1"
+                        Style="{StaticResource btnOther}" />
+
+                <StackLayout Grid.Row="2" VerticalOptions="End">
+                    <Button Text="Enregistrer" 
+                        Grid.Row="0"
+                        Style="{StaticResource btnSave}" />
+
+                    <Button Text="Annuler"
+                        Grid.Row="1"
+                        Style="{StaticResource btnCancel}"
+                        Margin="0,0,0,10"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Text="Qte" 
+                       Grid.Column="0" 
+                       Grid.Row="0" />
+
+                <Label Text="Référence" 
+                       Grid.Column="1" 
+                       Grid.Row="0"/>
+
+                <Label Text="Nom du produit" 
+                       Grid.Column="2" 
+                       Grid.Row="0"/>
+
+                <Label Text="Prix HT" 
+                       Grid.Column="3" 
+                       Grid.Row="0"/>
+
+                <Label Text="Prix TTC" 
+                       Grid.Column="4" 
+                       Grid.Row="0"/>
+
+                <ListView ItemsSource="{Binding Article}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding ArticleReference}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Label Text="TOTAL"
+                       Grid.ColumnSpan="3"
+                       Grid.Row="2"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="End"/>
+
+                <Label Text="20000€"
+                       Grid.Row="2"
+                       Grid.Column="3"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"/>
+
+                <Label Text="{Binding Test}"
+                       Grid.Row="2"
+                       Grid.Column="4"
+                       HorizontalOptions="FillAndExpand"
+                       HorizontalTextAlignment="Center"/>
+
+                <Grid Grid.ColumnSpan="5"
+                      Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Button Text="Plan"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Style="{StaticResource btnOther}"/>
+                    
+                    <Button Text="Panier"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource btnOther}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
