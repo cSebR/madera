@@ -19,7 +19,7 @@ namespace madera.ViewModels
 
         public void Init()
         {
-            Projets = App.Database.GetPeopleAsync().Result;
+            Projets = App.Database.GetProjetAsync().Result;
 
         }
 

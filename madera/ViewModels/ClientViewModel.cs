@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace madera.ViewModels
 {
@@ -11,11 +12,12 @@ namespace madera.ViewModels
         {
             Title = "Client";
             Init();
+
         }
 
         public void Init()
         {
-            Clients = App.Database.GetPeopleAsyncClient().Result;
+            Clients = App.Database.GetPeopleAsync().Result;
         }
 
         private List<ClientModel> clients;
@@ -31,7 +33,7 @@ namespace madera.ViewModels
                 clients = value;
                 OnPropertyChanged("Clients");
             }
-        }
+	}
 
     }
 }

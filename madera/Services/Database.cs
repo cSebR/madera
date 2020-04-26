@@ -18,12 +18,13 @@ namespace madera.Services
             _database.CreateTableAsync<ProjetModel>().Wait();
         }
 
-        public Task<List<ClientModel>> GetPeopleAsyncClient()
+        public Task<List<ClientModel>> GetPeopleAsync()
+
         {
             return _database.Table<ClientModel>().ToListAsync();
         }
 
-        public Task<List<ProjetModel>> GetPeopleAsync()
+        public Task<List<ProjetModel>> GetProjetAsync()
         {
             return _database.GetAllWithChildrenAsync<ProjetModel>();
         }
@@ -32,6 +33,7 @@ namespace madera.Services
         {
             return _database.InsertAsync(projet);
         }
+
 
         public Task<int> SaveClientAsync(ClientModel client)
         {
