@@ -19,7 +19,6 @@ namespace madera.Services
         }
 
         public Task<List<ClientModel>> GetPeopleAsync()
-
         {
             return _database.Table<ClientModel>().ToListAsync();
         }
@@ -33,7 +32,6 @@ namespace madera.Services
         {
             return _database.InsertAsync(projet);
         }
-
 
         public Task<int> SaveClientAsync(ClientModel client)
         {

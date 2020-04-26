@@ -1,8 +1,6 @@
 ﻿using SQLite;
 using SQLiteNetExtensions.Attributes;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace madera.Models
 {
@@ -38,10 +36,7 @@ namespace madera.Models
             }
         }
 
-
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<ProjetModel> Projets { get; set; }
-
-
     }
 }

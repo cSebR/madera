@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite;
+﻿using SQLite;
 using SQLiteNetExtensions.Attributes;
 
 namespace madera.Models
@@ -37,7 +34,5 @@ namespace madera.Models
                 return "";
             }
         }
-
     }
-
 }
