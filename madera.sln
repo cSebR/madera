@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "madera.Android", "madera.An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "madera.iOS", "madera.iOS\madera.iOS.csproj", "{3AB6B1CB-B614-4203-98BF-62CDF3B96AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "madera", "madera\madera.csproj", "{7F3F365A-1F90-4116-BC8F-76F130AAD6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "madera", "madera\madera.csproj", "{7F3F365A-1F90-4116-BC8F-76F130AAD6CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
