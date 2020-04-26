@@ -8,8 +8,18 @@
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Liste Projet">
     <ContentPage.Content>
-        <Grid Margin="200,40,200,200">
-            <ListView ItemsSource="{Binding Projets}" ItemTapped="MainListView_ItemTapped">
+        <Grid>
+            <ScrollView>
+                <ListView ItemsSource="{Binding Projets}" ItemTapped="MainListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell Text="{Binding Nom}"
+                              ImageSource="projet.png" TextColor ="white"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+            <!--<ListView ItemsSource="{Binding Projets}" ItemTapped="MainListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -40,7 +50,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

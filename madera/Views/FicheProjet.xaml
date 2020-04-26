@@ -59,19 +59,19 @@
                     BackgroundColor="Transparent"
                    />
             <Label Text="Devis" Grid.Row="8" TextColor="White"/>
-            <ImageButton Grid.Row="9"
+            <!--<ImageButton Grid.Row="9"
                     HeightRequest="300"
                     WidthRequest="300" 
                     Source="devis.png"
                     BackgroundColor="Transparent"
-                    />
+                    />-->
             <Label Text="Dossier Technique" Grid.Row="10" TextColor="White"/>
-            <ImageButton Grid.Row="11"
+            <!--<ImageButton Grid.Row="11"
                     HeightRequest="300"
                     WidthRequest="300" 
                     Source="devis.png"
                     BackgroundColor="Transparent"
-                   />
+                   />-->
 
         </Grid>
     </ContentPage.Content>

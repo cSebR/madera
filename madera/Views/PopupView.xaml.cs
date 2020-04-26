@@ -58,15 +58,7 @@ namespace madera.Views
                     Created_by = 1,
                     ClientId = Clientid
                 });
-
-                //string Nom = NomProjet.Text;
-                //string Date = DateTime.Now.ToString("dd-mm-yyyy");
-                // int ProjetId = 1;
-                //string ClientNom = ClientNom;
-
                 await Navigation.RemovePopupPageAsync(this);
-                //await Navigation.PushAsync(new FicheProjet(ProjetId,Nom, Date,Clientid,ClientNom));
-
 
             }
             else

@@ -46,10 +46,12 @@
                         <Label Grid.Column="1" 
                                Text="{Binding ID}" 
                                FontAttributes="Bold"
+                               TextColor="White"
                                />
                         <Label Grid.Column="2" 
                                Text="{Binding FullName}" 
                                FontAttributes="Bold"
+                               TextColor="White"
                                />
                     </Grid>
                 </DataTemplate>
@@ -58,22 +60,24 @@
 
 
 
-        <Label Text="Nom du projet" />
-        <Entry x:Name="NomProjet" Placeholder="Entrer nom du projet " Keyboard="Text" />
-        <Label x:Name="ErrorLabel" TextColor="Red"/>
+        <Label Text="Nom du projet" TextColor="White"/>
+        <Entry x:Name="NomProjet" Placeholder="Entrer nom du projet " Keyboard="Text" TextColor="White" />
+        <Label x:Name="ErrorLabel" TextColor="Red" />
 
         <Button BackgroundColor="Gray"
                 FontSize="30"
                 x:Name="BtnSave"
                 Clicked="BtnSave_Clicked"
                 Text="Enregistrer"
-                TextColor="White" />
+                TextColor="White"
+                Grid.Column="1"/>
         <Button BackgroundColor="Gray"
                 FontSize="30"
                 x:Name="BtnClose"
                 Clicked="BtnClose_Clicked"
                 Text="Annuler"
-                TextColor="White" />
+                TextColor="White"
+                Grid.Column="2"/>
 
     </StackLayout>
 </pages:PopupPage>
