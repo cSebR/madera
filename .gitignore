@@ -11,3 +11,5 @@ madera.MobileAppService/obj
 /madera.Android/obj
 madera.Test/bin
 madera.Test/obj
+/madera.API/bin
+/madera.API/obj
