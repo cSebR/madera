@@ -3,96 +3,120 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:madera.ViewModels"
              mc:Ignorable="d"
+             xmlns:custom="clr-namespace:madera.Custom"
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              x:Class="madera.Views.ClientForm"
-             Title="Formulaire_Client">
-    <ContentPage.Content>
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:ClientFormViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <Grid>
-            <Grid>
- 
+    <ContentPage.Content>
+        <Grid 
+            HorizontalOptions="Center"
+            Margin="100,0,100,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="10*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
- 
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
- 
-            <Label Grid.Row="1"  Grid.Column="1" Text="Nom" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="2"  Grid.Column="1" Text="Prenom" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="3"  Grid.Column="1" Text="Date de Naissance" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="4"  Grid.Column="1" Text="E-mail" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="5"  Grid.Column="1" Text="Telephone" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="6"  Grid.Column="1" Text="Commentaires" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="7"  Grid.Column="1" Text="{Binding RefClient}" TextColor="WhiteSmoke" x:Name="RefClientLabel"/>
 
-            <Entry Grid.Row="1"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="NomClientEntry"/>
-            <Entry Grid.Row="2"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PrenomClientEntry"/>
-            <!--<Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="DteNaissanceClientEntry"/>-->
-            <DatePicker Format="dd/MM/yyyy" Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" x:Name="DteNaissanceClientDatePicker"/>
-            <Entry Grid.Row="4"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Email" x:Name="EmailClientEntry"/>
-            <Entry Grid.Row="5"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Telephone" x:Name="TelephoneClientEntry"/>
-            <!--<Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry"/>-->
-            <Editor Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry" />
+            <!-- Row 0 -->
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="1"  Grid.Column="2" Text="N° de Rue" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="2"  Grid.Column="2" Text="Rue" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="3"  Grid.Column="2" Text="Code Postal" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="4"  Grid.Column="2" Text="Ville" TextColor="WhiteSmoke"/>
-            <Label Grid.Row="5"  Grid.Column="2" Text="Pays" TextColor="WhiteSmoke"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-            <Entry Grid.Row="1"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric" x:Name="NumRueClientEntry"/>
-            <Entry Grid.Row="2"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="RuelientEntry"/>
-            <Entry Grid.Row="3"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric" x:Name="CPClientEntry"/>
-            <Entry Grid.Row="4"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="VilleClientEntry"/>
-            <Entry Grid.Row="5"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PaysClientEntry"/>
+                <Image Source="client.png" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="60" HorizontalOptions="Center" Margin="0,30,0,30"/>
 
-            <ImageButton
-             Grid.Row="7"  Grid.Column="1"
-             BackgroundColor="Transparent"
-             Source="BtnSauvegarder.png"
-             HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand"
-             Clicked="OnSaveClientClicked"/>
+            </Grid>
 
-            <ImageButton
-             Grid.Row="7"  Grid.Column="2"
-             BackgroundColor="Transparent"
-             Source="BtnAnnuler.png"
-             HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand"
-             />
- 
+            <!-- Column 0-->
+            <Label Grid.Row="1"  Grid.Column="0" Text="Prénom"/>
+            <custom:EntryClient Grid.Row="2"  Grid.Column="0" Text="{Binding ClientModel.Prenom}"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Nom"/>
+            <custom:EntryClient Grid.Row="4" Grid.Column="0" Text="{Binding ClientModel.Nom}"/>
+
+            <Label Grid.Row="5"  Grid.Column="0" Text="Date de naissance"/>
+            <custom:DatePickerClient Format="dd/MM/yyyy" Grid.Row="6"  Grid.Column="0" Date="{Binding ClientModel.DateNaissance}"/>
+
+            <Label Grid.Row="7"  Grid.Column="0" Text="E-mail"/>
+            <custom:EntryClient Grid.Row="8"  Grid.Column="0" Text="{Binding ClientModel.Email}" Keyboard="Email"/>
+
+            <Label Grid.Row="9"  Grid.Column="0" Text="Téléphone" />
+            <custom:EntryClient Grid.Row="10"  Grid.Column="0" Keyboard="Telephone" Text="{Binding ClientModel.Telephone}"/>
+
+            <!-- Column 1 -->
+            <Label Grid.Row="1"  Grid.Column="1" Text="N° de Rue" />
+            <custom:EntryClient Grid.Row="2"  Grid.Column="1"  Keyboard="Numeric" Text="{Binding ClientModel.NumRue}"/>
+
+            <Label Grid.Row="3"  Grid.Column="1" Text="Rue"/>
+            <custom:EntryClient Grid.Row="4"  Grid.Column="1" Text="{Binding ClientModel.Rue}"/>
+
+            <Label Grid.Row="5"  Grid.Column="1" Text="Code Postal"/>
+            <custom:EntryClient Grid.Row="6"  Grid.Column="1" Text="{Binding ClientModel.CodePostal}"/>
+
+            <Label Grid.Row="7"  Grid.Column="1" Text="Ville"/>
+            <custom:EntryClient Grid.Row="8"  Grid.Column="1" Text="{Binding ClientModel.Ville}" />
+
+            <Label Grid.Row="9"  Grid.Column="1" Text="Pays"/>
+            <custom:EntryClient Grid.Row="10"  Grid.Column="1" Text="{Binding ClientModel.Pays}"/>
+
+            <!-- Buttons -->
+            <ImageButton Grid.Row="11" 
+                         Grid.Column="0"
+                         BackgroundColor="Transparent"
+                         Source="BtnSauvegarder.png"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         HeightRequest="50"
+                         WidthRequest="500"
+                         Margin="0,50,0,0"
+                         Command="{Binding BtnAddClient}"/>
+
+            <ImageButton Grid.Row="11"
+                         Grid.Column="1"
+                         BackgroundColor="Transparent"
+                         Source="BtnAnnuler.png"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         HeightRequest="50"
+                         WidthRequest="500"
+                         Margin="0,50,0,0"/>
         </Grid>
-    </Grid>
     </ContentPage.Content>
-    <!--<ContentPage.Content>
-        <ContentPage.ToolbarItems>
-        <ToolbarItem Text="+"
-                     Clicked="OnNoteAddedClicked" />
-    </ContentPage.ToolbarItems>
-    <ListView x:Name="listView"
-              Margin="20"
-              ItemSelected="OnListViewItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Text}"
-                          Detail="{Binding Date}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-    </ContentPage.Content>
-</ContentPage>-->
+
 </ContentPage>

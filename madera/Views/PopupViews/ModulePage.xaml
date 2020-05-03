@@ -28,7 +28,8 @@
            BackgroundColor="{StaticResource BgPopup}">
         <StackLayout>
             <Label Text="Coupe de principe (Module)" />
-            <Button Text="Choix Coupe de principe"/>
+            <Button Text="Choix Coupe de principe" 
+                    Command="{Binding BtnCoupePrincipal}"/>
             <Label Text="Plancher" />
             <Button Text="Choix Plancher"/>
             <Label Text="Toiture" />
@@ -37,9 +38,9 @@
             <Button Text="Choix Panneaux"/>
             <Label Text="Bardage" />
             <Button Text="Choix Bardage"/>
-            <Entry Placeholder="" Text="{Binding Test}"/>
             <Button Text="Ajouter"
                     Style="{StaticResource btnSave}"
+                    Command="{Binding BtnAddModule}"
                     />
         </StackLayout>
     </Frame>

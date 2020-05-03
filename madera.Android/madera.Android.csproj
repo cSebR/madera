@@ -60,6 +60,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Custom\ClientCustomDatePicker.cs" />
+    <Compile Include="Custom\ClientCustomEntryRenderer.cs" />
     <Compile Include="Custom\CustomEntryRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

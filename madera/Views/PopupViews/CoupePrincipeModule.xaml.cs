@@ -1,4 +1,5 @@
-﻿using Rg.Plugins.Popup.Pages;
+﻿using madera.ViewModels;
+using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,10 @@ namespace madera.Views.PopupViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CoupePrincipeModule : PopupPage
     {
-        public CoupePrincipeModule()
+        public CoupePrincipeModule(PlanHomeViewModel planHomeViewModel)
         {
             InitializeComponent();
+            this.BindingContext = planHomeViewModel;
         }
     }
 }

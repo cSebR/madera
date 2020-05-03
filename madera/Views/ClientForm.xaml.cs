@@ -12,25 +12,6 @@ namespace madera.Views
         {
             InitializeComponent();
         }
-
-        async void OnSaveClientClicked(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(NomClientEntry.Text) && !string.IsNullOrWhiteSpace(PrenomClientEntry.Text))
-            {
-                await App.Database.SaveClientAsync(new ClientModel
-                {
-                    Nom = NomClientEntry.Text,
-                    Prenom = PrenomClientEntry.Text,
-                    RefClient = NomClientEntry.Text + PrenomClientEntry.Text + DateTime.Now
-                    //Age = int.Parse(ageEntry.Text)
-                });
-
-                NomClientEntry.Text = PrenomClientEntry.Text = String.Empty;
-                //ClientList.ItemsSource = await App.Database.GetPeopleAsync();
-            }
-
-        }
-
     }
 
 }

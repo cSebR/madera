@@ -104,11 +104,6 @@ namespace madera.Services
             });
         }
 
-        public Task<List<ClientModel>> GetPeopleAsync()
-        {
-            return _database.Table<ClientModel>().ToListAsync();
-        }
-
         public Task<List<ProjetModel>> GetAllProjetsAsync()
         {
             return _database.GetAllWithChildrenAsync<ProjetModel>();
@@ -117,11 +112,6 @@ namespace madera.Services
         public Task<int> SaveProjetAsync(ProjetModel projet)
         {
             return _database.InsertAsync(projet);
-        }
-
-        public Task<int> SaveClientAsync(ClientModel client)
-        {
-            return _database.InsertAsync(client);
         }
     }
 }

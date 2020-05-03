@@ -4,78 +4,114 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:custom="clr-namespace:madera.Custom"
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              x:Class="madera.Views.FicheClient"
-             Title="Fiche_Client">
+             Title="Fiche Client">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Padding" Value="10,0,10,0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <Grid>
-            <Grid>
+        <Grid 
+            HorizontalOptions="Center"
+            Margin="100,0,100,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Row 0 -->
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
                 
-                <Label Grid.Row="1"  Grid.Column="1" Text="Nom" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="2"  Grid.Column="1" Text="Prenom" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="3"  Grid.Column="1" Text="Date de Naissance" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="4"  Grid.Column="1" Text="E-mail" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="5"  Grid.Column="1" Text="Telephone" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="6"  Grid.Column="1" Text="Commentaires" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="7"  Grid.Column="1" Text="{Binding RefClient}" TextColor="WhiteSmoke" x:Name="RefClientLabel"/>
+                <Image Source="client.png" Grid.Column="0" Grid.Row="0" HeightRequest="60" HorizontalOptions="Start" Margin="0,30,0,30"/>
 
-                <Entry Grid.Row="1"  Grid.Column="1" TextColor="WhiteSmoke"  x:Name="NomClientEntry" />
-                <Entry Grid.Row="2"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PrenomClientEntry"/>
-                <!--<Entry Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="DteNaissanceClientEntry"/>-->
-                <DatePicker Format="dd/MM/yyyy" Grid.Row="3"  Grid.Column="1" TextColor="WhiteSmoke" x:Name="DteNaissanceClientDatePicker"/>
-                <Entry Grid.Row="4"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Email" x:Name="EmailClientEntry"/>
-                <Entry Grid.Row="5"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Telephone" x:Name="TelephoneClientEntry"/>
-                <!--<Entry Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry"/>-->
-                <Editor Grid.Row="6"  Grid.Column="1" TextColor="WhiteSmoke" Keyboard="Text" x:Name="CommentaireClientEntry" />
-
-                <Label Grid.Row="1"  Grid.Column="2" Text="N° de Rue" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="2"  Grid.Column="2" Text="Rue" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="3"  Grid.Column="2" Text="Code Postal" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="4"  Grid.Column="2" Text="Ville" TextColor="WhiteSmoke"/>
-                <Label Grid.Row="5"  Grid.Column="2" Text="Pays" TextColor="WhiteSmoke"/>
-
-                <Entry Grid.Row="1"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric" x:Name="NumRueClientEntry"/>
-                <Entry Grid.Row="2"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="RuelientEntry"/>
-                <Entry Grid.Row="3"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Numeric" x:Name="CPClientEntry"/>
-                <Entry Grid.Row="4"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="VilleClientEntry"/>
-                <Entry Grid.Row="5"  Grid.Column="2" TextColor="WhiteSmoke" Keyboard="Text" x:Name="PaysClientEntry"/>
-
-                <ImageButton
-             Grid.Row="7"  Grid.Column="1"
-             BackgroundColor="Transparent"
-             Source="BtnSauvegarder.png"
-             HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand"
-             />
-
-                <ImageButton
-             Grid.Row="7"  Grid.Column="2"
-             BackgroundColor="Transparent"
-             Source="BtnSupprimer.png"
-             HorizontalOptions="Center"
-             VerticalOptions="CenterAndExpand"
-             />
-
+                <Label Text="{Binding ClientModel.ID, StringFormat='Référence client:  {0:0}'}" Grid.Column="1" Grid.Row="0" VerticalTextAlignment="Center"/>
             </Grid>
+
+            <!-- Column 0-->
+            <Label Grid.Row="1"  Grid.Column="0" Text="Prénom"/>
+            <custom:EntryClient Grid.Row="2"  Grid.Column="0" Text="{Binding ClientModel.Prenom}"/>
+           
+            <Label Grid.Row="3" Grid.Column="0" Text="Nom"/>
+            <custom:EntryClient Grid.Row="4" Grid.Column="0" Text="{Binding ClientModel.Nom}"/>
+
+            <Label Grid.Row="5"  Grid.Column="0" Text="Date de naissance"/>
+            <custom:DatePickerClient Format="dd/MM/yyyy" Grid.Row="6"  Grid.Column="0" Date="{Binding ClientModel.DateNaissance}"/>
+
+            <Label Grid.Row="7"  Grid.Column="0" Text="E-mail"/>
+            <custom:EntryClient Grid.Row="8"  Grid.Column="0" Text="{Binding ClientModel.Email}" Keyboard="Email"/>
+
+            <Label Grid.Row="9"  Grid.Column="0" Text="Téléphone" />
+            <custom:EntryClient Grid.Row="10"  Grid.Column="0" Keyboard="Telephone" Text="{Binding ClientModel.Telephone}"/>
+            
+            <!-- Column 1 -->
+            <Label Grid.Row="1"  Grid.Column="1" Text="N° de Rue" />
+            <custom:EntryClient Grid.Row="2"  Grid.Column="1"  Keyboard="Numeric" Text="{Binding ClientModel.NumRue}"/>
+
+            <Label Grid.Row="3"  Grid.Column="1" Text="Rue"/>
+            <custom:EntryClient Grid.Row="4"  Grid.Column="1" Text="{Binding ClientModel.Rue}"/>
+
+            <Label Grid.Row="5"  Grid.Column="1" Text="Code Postal"/>
+            <custom:EntryClient Grid.Row="6"  Grid.Column="1" Text="{Binding ClientModel.CodePostal}"/>
+
+            <Label Grid.Row="7"  Grid.Column="1" Text="Ville"/>
+            <custom:EntryClient Grid.Row="8"  Grid.Column="1" Text="{Binding ClientModel.Ville}" />
+
+            <Label Grid.Row="9"  Grid.Column="1" Text="Pays"/>
+            <custom:EntryClient Grid.Row="10"  Grid.Column="1" Text="{Binding ClientModel.Pays}"/>
+            
+            <!-- Buttons -->
+            <ImageButton Grid.Row="11" 
+                         Grid.Column="0"
+                         BackgroundColor="Transparent"
+                         Source="BtnSauvegarder.png"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         HeightRequest="50"
+                         WidthRequest="500"
+                         Margin="0,50,0,0"
+                         Command="{Binding BtnUpdateClient}"/>
+
+            <ImageButton Grid.Row="11"
+                         Grid.Column="1"
+                         BackgroundColor="Transparent"
+                         Source="BtnSupprimer.png"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         HeightRequest="50"
+                         WidthRequest="500"
+                         Margin="0,50,0,0"
+                         Command="{Binding BtnRemoveClient}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

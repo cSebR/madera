@@ -17,17 +17,7 @@ namespace madera.Views
         public FicheClient(ClientModel client)
         {
             InitializeComponent();
-            BindingContext = new ClientViewModel();
-
-            NomClientEntry.Text = client.Nom;
-            PrenomClientEntry.Text = client.Prenom;
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            ((ClientViewModel)this.BindingContext).Init();
-
+            BindingContext = new FicheClientViewModel(client);
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace madera.Services
 {
-    public interface IDevisService
+    public interface IClientService
     {
-        Task<List<Devis>> GetAllDevisAsync();
-        Task<int> AddDevisAsync(Devis devis);
+        Task<int> AddClientAsync(ClientModel clientModel);
+        Task<int> UpdateClientAsync(ClientModel clientModel);
     }
 }
