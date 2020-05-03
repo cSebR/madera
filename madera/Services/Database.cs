@@ -52,9 +52,10 @@ namespace madera.Services
 
         private void _loadFakeClient()
         {
-            _database.InsertAllAsync(new [] {
+            _database.InsertAllWithChildrenAsync(new [] {
                 new ClientModel
                 {
+                    ID = 1,
                     Nom = "Chhouinard",
                     Prenom = "Sumner",
                     NumRue = "21",
@@ -63,7 +64,20 @@ namespace madera.Services
                     CodePostal = "83160",
                     Email = "SumnerChouinard@rhyta.com",
                     Telephone = "0425177049",
-                    Pays = "FRANCE"
+                    Pays = "FRANCE",
+                    Projets = new List<ProjetModel>()
+                    {
+                        new ProjetModel()
+                        {
+                            ClientId = 1,
+                            Nom = "Projet #1"
+                        },
+                        new ProjetModel()
+                        {
+                            ClientId = 1,
+                            Nom = "Projet #2"
+                        }
+                    }
                 },                
                 new ClientModel
                 {
