@@ -1,14 +1,17 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace madera.Models
 {
-    public class Article
+    public abstract class Article
     {
+        [PrimaryKey, AutoIncrement]
         public long Reference { get; set; }
         public string Nom { get; set; }
         public float PrixHT { get; set; }
+        public int QuantiteDefaut { get; set; }
 
         public float PrixTTC
         {

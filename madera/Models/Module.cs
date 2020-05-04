@@ -17,7 +17,10 @@ namespace madera.Models
 
         public double Prix_ht { get; set; }
 
-        [ManyToMany(typeof(PlanModule))] 
-        public List<Plan> Plans { get; set; }
+        [ForeignKey(typeof(Plan))]
+        public int PlanReference { get; set; }
+
+        [ManyToOne]
+        public Plan Plan { get; set; }
     }
 }

@@ -12,13 +12,13 @@ namespace madera.Models
         [PrimaryKey, AutoIncrement]
         public long Id { get; set; }
 
-        public int Taux_remise { get; set; }
+        public int Taux { get; set; }
 
         [MaxLength(75)]
-        public string Nom_remise { get; set; }
+        public string Nom { get; set; }
 
         [ForeignKey(typeof(Devis))] 
-        public int Devis_id { get; set; }
+        public int DevisId { get; set; }
 
         [OneToOne] 
         public Devis Devis { get; set; }

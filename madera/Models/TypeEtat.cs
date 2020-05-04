@@ -13,7 +13,7 @@ namespace madera.Models
         public long Id { get; set; }
 
         [MaxLength(75)]
-        public string Type_etat { get; set; }
+        public string Nom { get; set; }
 
         [OneToMany]
         public List<Devis> Devis { get; set; }

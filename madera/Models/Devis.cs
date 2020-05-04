@@ -10,30 +10,34 @@ namespace madera.Models
     public class Devis
     {
         [PrimaryKey, AutoIncrement]
-        public long Ref_devis { get; set; }
+        public long Reference { get; set; }
 
-        public string Nom_devis { get; set; }
+        [MaxLength(255)]
+        public string Nom { get; set; }
 
-        public DateTime Date_creation { get; set; }
+        public DateTime CreeLe { get; set; }
 
-        public int Marge_entreprise { get; set; }
+        public int Marge { get; set; }
 
         [ForeignKey(typeof(Remise))]
-        public int Remise_id { get; set; }
+        public int RemiseId { get; set; }
 
         [OneToOne]
         public Remise Remise { get; set; }
 
         [ForeignKey(typeof(DossierTechnique))]
-        public int Dossier_technique_id { get; set; }
+        public int DossierTechniqueId { get; set; }
 
         [OneToOne]
         public DossierTechnique DossierTechnique { get; set; }
 
         [ForeignKey(typeof(TypeEtat)), NotNull]
-        public int Type_etat_id { get; set; }
+        public int TypeEtatId { get; set; }
 
-        [OneToOne]
-        public TypeEtat Type_etat { get; set; }
+        [ManyToOne]
+        public TypeEtat TypeEtat { get; set; }
+
+        [OneToMany]
+        public List<LigneDevis> LigneDEvis { get; set; }
     }
 }

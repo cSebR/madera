@@ -236,36 +236,6 @@ namespace madera.ViewModels
                 {
                     _btnAddModule = new Command( async () =>
                     {
-                        this.Articles.Add(new Article
-                        {
-                            Nom = "Article #1",
-                            Reference = 12345645465,
-                            PrixHT = 100.25f
-                        });                        
-                        this.Articles.Add(new Article
-                        {
-                            Nom = "Article #2",
-                            Reference = 123454545465,
-                            PrixHT = 280.25f
-                        });                        
-                        this.Articles.Add(new Article
-                        {
-                            Nom = "Article #3",
-                            Reference = 12332147465,
-                            PrixHT = 360.99f
-                        });                        
-                        this.Articles.Add(new Article
-                        {
-                            Nom = "Article #4",
-                            Reference = 12332445465,
-                            PrixHT = 999.99f
-                        });                        
-                        this.Articles.Add(new Article
-                        {
-                            Nom = "Article #5",
-                            Reference = 12345895465,
-                            PrixHT = 499.99f
-                        });
                         _calculerTotal();
                         await PopupNavigation.Instance.PopAsync();
                     });
