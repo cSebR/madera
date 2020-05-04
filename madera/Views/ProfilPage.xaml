@@ -28,6 +28,8 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <StackLayout Grid.Row="0"
@@ -51,6 +53,21 @@
                 <Label Text="{Binding Utilisateur.Email}"
                    Grid.Row="2"
                    Grid.Column="1" />
+
+                <Label Text="Nom"
+                   Grid.Row="3"
+                   Grid.Column="0" />
+                <Label Text="{Binding Utilisateur.Nom}"
+                   Grid.Row="3"
+                   Grid.Column="1" />
+
+                <Label Text="Prénom"
+                   Grid.Row="4"
+                   Grid.Column="0" />
+                <Label Text="{Binding Utilisateur.Prenom}"
+                   Grid.Row="4"
+                   Grid.Column="1" />
+
             </Grid>
         </Frame>
     </ContentPage.Content>
