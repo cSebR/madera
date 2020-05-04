@@ -4,6 +4,7 @@ using madera.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace madera.ViewModels
@@ -74,11 +75,16 @@ namespace madera.ViewModels
                 {
                     _btnRemoveClient = new Command( async () =>
                     {
-                        await ClientService.RemoveClientAsync(_clientModel);
+                        DisplayAlert("Suppression d'un client", "Êtes-vous sûr de vouloir supprimer le client?", "Oui", "Non");
                     });
                 }
                 return _btnRemoveClient;
             }
+        }
+
+        public async Task RemoveClientAsync()
+        {
+            await ClientService.RemoveClientAsync(_clientModel);
         }
     }
 }

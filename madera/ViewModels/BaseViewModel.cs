@@ -50,5 +50,11 @@ namespace madera.ViewModels
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         #endregion
+
+        public void DisplayAlert(string title, string message, string reponse1, string reponse2)
+        {
+            string[] values = { title, message, reponse1, reponse2 };
+            MessagingCenter.Send<BaseViewModel, string[]>(this, "DisplayAlert", values);
+        }
     }
 }
