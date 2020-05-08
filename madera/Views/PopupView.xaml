@@ -17,67 +17,93 @@
                                    ScaleOut="0.8"
                                    />
     </pages:PopupPage.Animation>
-    <!--  You can use any elements here which are extended from Xamarin.Forms.View  -->
-    <StackLayout Margin="12"
-                 Padding="24"
-                 HorizontalOptions="Center"
-                 VerticalOptions="Center">
-
-        <Label x:Name="currentSelectedItemLabel"
+    <Frame CornerRadius="10"  
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           Padding="20, 20, 20, 20"
+           Margin="200,200,200,200"
+           OutlineColor="{StaticResource BorderPopup}" 
+           BackgroundColor="{StaticResource BgPopup}">
+        <StackLayout>
+            <Label x:Name="currentSelectedItemLabel"
                    Grid.Row="1"
                    Grid.Column="1" IsVisible="False" />
 
-
-        <CollectionView ItemsSource="{Binding Clients}"
+            <Label Text="Sélectionner un client"/>
+            <CollectionView ItemsSource="{Binding Clients}"
                         SelectionMode="Single"
                         SelectionChanged="OnCollectionViewSelectionChanged">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="1" 
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10,10,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1" 
                                Text="{Binding ID}" 
                                FontAttributes="Bold"
-                               TextColor="White"
                                />
-                        <Label Grid.Column="2" 
+                            <Label Grid.Column="2" 
                                Text="{Binding FullName}" 
                                FontAttributes="Bold"
-                               TextColor="White"
                                />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
+            <Label x:Name="ErrorLabelClient" TextColor="Red" />
+            <Label Text="Nom du projet"/>
+            <Entry x:Name="NomProjet" Placeholder="Entrer nom du projet " Keyboard="Text" />
+            <Label x:Name="ErrorLabelProjet" TextColor="Red" />
 
-
-        <Label Text="Nom du projet" TextColor="White"/>
-        <Entry x:Name="NomProjet" Placeholder="Entrer nom du projet " Keyboard="Text" TextColor="White" />
-        <Label x:Name="ErrorLabel" TextColor="Red" />
-
-        <Button BackgroundColor="Gray"
-                FontSize="30"
-                x:Name="BtnSave"
-                Clicked="BtnSave_Clicked"
-                Text="Enregistrer"
-                TextColor="White"
-                Grid.Column="1"/>
-        <Button BackgroundColor="Gray"
-                FontSize="30"
+            <Grid Padding="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button FontSize="30"
+                        x:Name="BtnSave"
+                        Clicked="BtnSave_Clicked"
+                        Text="Enregistrer"
+                        TextColor="White"
+                        Grid.Column="1"
+                        Style="{StaticResource btnSave}"
+                />
+                <Button BackgroundColor="Gray"
+                        FontSize="30"
+                        x:Name="BtnClose"
+                        Clicked="BtnClose_Clicked"
+                        Text="Annuler"
+                        TextColor="White"
+                        Grid.Column="2"
+                        Style="{StaticResource btnSave}"
+                />
+            </Grid>
+            
+                    
+                
+            <!--<Button BackgroundColor="Gray"
+               
                 x:Name="BtnClose"
                 Clicked="BtnClose_Clicked"
                 Text="Annuler"
                 TextColor="White"
-                Grid.Column="2"/>
-
-    </StackLayout>
+                />-->
+        </StackLayout>
+        
+        
+        
+    </Frame>
 </pages:PopupPage>

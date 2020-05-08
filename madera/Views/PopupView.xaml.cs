@@ -45,9 +45,23 @@ namespace madera.Views
 
         async private void BtnSave_Clicked(object sender, EventArgs e)
         {
-
-            if ((!string.IsNullOrWhiteSpace(NomProjet.Text)) && (!string.IsNullOrWhiteSpace(currentSelectedItemLabel.Text)))
+            if ((string.IsNullOrWhiteSpace(currentSelectedItemLabel.Text))  || (string.IsNullOrWhiteSpace(NomProjet.Text)))
             {
+
+                if (string.IsNullOrWhiteSpace(currentSelectedItemLabel.Text))
+                {
+                    ErrorLabelClient.Text = "Veuillez sélectionner un client";
+                    base.OnAppearing();
+                }
+                if (string.IsNullOrWhiteSpace(NomProjet.Text)){
+                    ErrorLabelProjet.Text = "Veuillez entrer le nom du projet";
+                    base.OnAppearing();
+                }
+                
+            }
+            else
+            {
+                base.OnAppearing();
                 int Clientid = Convert.ToInt32(currentSelectedItemLabel.Text);
                 Debug.WriteLine("item : " + Clientid);
                 await App.Database.SaveProjetAsync(new ProjetModel
@@ -59,15 +73,8 @@ namespace madera.Views
                     ClientId = Clientid
                 });
                 await Navigation.RemovePopupPageAsync(this);
-
             }
-            else
-            {
 
-                ErrorLabel.Text = "Veuillez entrer le nom du projet";
-                base.OnAppearing();
-            }
-            //
         }
 
         async private void BtnClose_Clicked(object sender, EventArgs e)

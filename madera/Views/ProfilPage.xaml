@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="madera.Views.ProfilPage"
-             Title="Profil">
+             Title="Profil"
+             BackgroundImageSource="BackGroud_Portrait_2.jpg">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Profil"
+            <Label Text="Bienvenue"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
