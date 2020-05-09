@@ -28,21 +28,23 @@
            BackgroundColor="{StaticResource BgPopup}">
         <StackLayout>
             <Label Text="Coupe de principe (Module)" />
-            <Button Text="Choix Coupe de principe" 
+            <Button Text="{Binding NomCoupePrincipe}" 
                     Command="{Binding BtnCoupePrincipal}"/>
             <Label Text="Plancher" />
-            <Button Text="Choix Plancher"/>
+            <Button Text="{Binding NomPlancher}"
+                    Command="{Binding BtnPlancher}"/>
             <Label Text="Toiture" />
-            <Button Text="Choix Toiture"/>
+            <Button Text="{Binding NomToiture}"
+                    Command="{Binding BtnToiture}"/>
             <Label Text="Panneaux" />
-            <Button Text="Choix Panneaux"/>
+            <Button Text="{Binding NomPanneaux}"
+                    Command="{Binding BtnPanneau}"/>
             <Label Text="Bardage" />
-            <Button Text="Choix Bardage"/>
+            <Button Text="{Binding NomBardage}"
+                    Command="{Binding BtnBardage}"/>
             <Button Text="Ajouter"
                     Style="{StaticResource btnSave}"
-                    Command="{Binding BtnAddModule}"
-                    />
+                    Command="{Binding BtnAddModule}"/>
         </StackLayout>
     </Frame>
-
 </pages:PopupPage>
