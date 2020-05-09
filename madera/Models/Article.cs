@@ -7,8 +7,8 @@ namespace madera.Models
 {
     public abstract class Article
     {
-        [PrimaryKey, AutoIncrement]
-        public long Reference { get; set; }
+        [PrimaryKey]
+        public string Reference { get; set; }
         public string Nom { get; set; }
         public float PrixHT { get; set; }
         public int QuantiteDefaut { get; set; }
