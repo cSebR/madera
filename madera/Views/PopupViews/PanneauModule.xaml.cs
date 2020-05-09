@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace madera.Views.PopupViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CoupePrincipeModule : PopupPage
+    public partial class PanneauModule : PopupPage
     {
-        public CoupePrincipeModule()
+        public PanneauModule()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace madera.Views.PopupViews
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            ((CoupePrincipeViewModel)this.BindingContext).LoadCoupesPrincipe();
+            ((PanneauViewModel)this.BindingContext).LoadPanneau();
         }
     }
 }

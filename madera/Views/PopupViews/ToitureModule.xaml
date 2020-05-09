@@ -5,7 +5,7 @@
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
     xmlns:vm="clr-namespace:madera.ViewModels"
-    x:Class="madera.Views.PopupViews.CoupePrincipeModule">
+    x:Class="madera.Views.PopupViews.ToitureModule">
    
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation 
@@ -21,7 +21,7 @@
     </pages:PopupPage.Animation>
 
     <pages:PopupPage.BindingContext>
-        <vm:CoupePrincipeViewModel />
+        <vm:ToitureViewModel />
     </pages:PopupPage.BindingContext>
 
     <Frame CornerRadius="10"  
@@ -36,10 +36,10 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <ListView ItemsSource="{Binding CoupesPrincipes}"
+            <ListView ItemsSource="{Binding Toitures}"
                       IsPullToRefreshEnabled="true"
                       SelectionMode="Single"
-                      SelectedItem="{Binding SelectedCoupePrincipe}"
+                      SelectedItem="{Binding SelectedToiture}"
                       Grid.Row="0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -58,7 +58,7 @@
             <Button Text="Ajouter" 
                     Style="{StaticResource btnOther}"
                     Grid.Row="1"
-                    Command="{Binding BtnCoupePrincipe}"/>
+                    Command="{Binding BtnToiture}"/>
         </Grid>
     </Frame>
 </pages:PopupPage>
