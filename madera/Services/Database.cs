@@ -41,6 +41,10 @@ namespace madera.Services
             _database.DropTableAsync<TypeEtat>().Wait();
             _database.DropTableAsync<Module>().Wait();
             _database.DropTableAsync<CoupePrincipe>().Wait();
+            _database.DropTableAsync<Plancher>().Wait();
+            _database.DropTableAsync<Toiture>().Wait();
+            _database.DropTableAsync<Panneau>().Wait();
+            _database.DropTableAsync<Bardage>().Wait();
         }
 
         /**
@@ -60,6 +64,10 @@ namespace madera.Services
             _database.CreateTableAsync<TypeEtat>().Wait();
             _database.CreateTableAsync<Module>().Wait();
             _database.CreateTableAsync<CoupePrincipe>().Wait();
+            _database.CreateTableAsync<Plancher>().Wait();
+            _database.CreateTableAsync<Toiture>().Wait();
+            _database.CreateTableAsync<Panneau>().Wait();
+            _database.CreateTableAsync<Bardage>().Wait();
         }
 
         /**
@@ -70,6 +78,10 @@ namespace madera.Services
             _loadFakeDataClient();
             _loadFakeDataTypeEtat();
             _loadFakeDataCoupePrincipe();
+            _loadFakeDataPlancher();
+            _loadFakeDataToiture();
+            _loadFakeDataPanneau();
+            _loadFakeDataBardage();
         }
 
         /**
@@ -164,16 +176,19 @@ namespace madera.Services
                 {
                     Id = 3,
                     Nom = "Accepté"
-                },
+                }
             });
         }
 
+        /**
+         * Création des coupes de principes
+         */
         private void _loadFakeDataCoupePrincipe()
         {
             _database.InsertAllAsync(new[] {
                 new CoupePrincipe
                 {
-                    Reference = 1,
+                    Reference = "MAD-38-A",
                     Nom = "CARRE 38m²",
                     Largeur = 615,
                     Longueur = 615,
@@ -182,7 +197,7 @@ namespace madera.Services
                 },
                 new CoupePrincipe
                 {
-                    Reference = 2,
+                    Reference = "MAD-38-B",
                     Nom = "RECTANGLE 38m²",
                     Largeur = 750,
                     Longueur = 500,
@@ -191,7 +206,7 @@ namespace madera.Services
                 },
                 new CoupePrincipe
                 {
-                    Reference = 3,
+                    Reference = "MAD-57-A",
                     Nom = "CARRE 57m²",
                     Largeur = 750,
                     Longueur = 750,
@@ -200,18 +215,154 @@ namespace madera.Services
                 },
                 new CoupePrincipe
                 {
-                    Reference = 4,
+                    Reference = "MAD-57-B",
                     Nom = "RECTANGLE 57m²",
                     Largeur = 940,
                     Longueur = 600,
                     PrixHT = 1955f,
                     QuantiteDefaut = 1
+                }
+            });
+        }
+
+        /**
+         * Création des planchers
+         */
+        private void _loadFakeDataPlancher()
+        {
+            _database.InsertAllAsync(new[] { 
+                new Plancher
+                {
+                    Reference = "MAD-PB-38B",
+                    Nom = "Plancher Bois",
+                    PrixHT = 500,
+                    QuantiteDefaut = 1
                 },
-            }); ;
+                new Plancher
+                {
+                    Reference = "MAD-PSP",
+                    Nom = "Plancher: Solution personelle",
+                    PrixHT = 0,
+                    QuantiteDefaut = 1
+                }
+            });
+        }
+
+        /**
+         * Création des toitures
+         */
+         private void _loadFakeDataToiture()
+         {
+            _database.InsertAllAsync(new[]
+            {
+                new Toiture
+                {
+                    Reference = "MAD-CA30-38-B",
+                    Nom = "Charpente Traditionnelle deux pentes à 30°",
+                    PrixHT = 10000,
+                    QuantiteDefaut = 1
+                },                
+                new Toiture
+                {
+                    Reference = "MAD-FP30-38-B",
+                    Nom = "Charpente Traditionnelle deux pentes à 50°",
+                    PrixHT = 12000,
+                    QuantiteDefaut = 1
+                },                
+                new Toiture
+                {
+                    Reference = "MAD-CA20-38-B",
+                    Nom = "Charpente Traditionnelle deux pentes à 20°",
+                    PrixHT = 8000,
+                    QuantiteDefaut = 1
+                },                
+                new Toiture
+                {
+                    Reference = "MAD-FP20-38-B",
+                    Nom = "Charpente Traditionnelle deux pentes à 40°",
+                    PrixHT = 11000,
+                    QuantiteDefaut = 1
+                }
+            });
+        }
+
+        /**
+         * Création des panneaux
+         */
+        private void _loadFakeDataPanneau()
+        {
+            _database.InsertAllAsync(new[]
+            {
+                new Panneau
+                {
+                    Reference = "MAD-PM01-PP",
+                    Nom = "Panneau plein sans ouverture",
+                    PrixHT = 150,
+                    QuantiteDefaut = 1,
+                },
+                new Panneau
+                {
+                    Reference = "MAD-PM02-PS",
+                    Nom = "Panneau ouverture porte simple",
+                    PrixHT = 300,
+                    QuantiteDefaut = 1
+                },               
+                new Panneau
+                {
+                    Reference = "MAD-PM03-FS",
+                    Nom = "Panneau ouverture fenêtre simple",
+                    PrixHT = 400,
+                    QuantiteDefaut = 1
+                },                
+                new Panneau
+                {
+                    Reference = "MAD-PM04-FDS",
+                    Nom = "Panneau ouverture fenêtre double S",
+                    PrixHT = 500,
+                    QuantiteDefaut = 1
+                }
+            });
+        }
+
+        /**
+         * Création des bardages
+         */
+        private void _loadFakeDataBardage()
+        {
+            _database.InsertAllAsync(new[]
+            {
+                new Bardage
+                {
+                    Reference = "MAD-BM-01-PSN-38-B",
+                    Nom = "Bardage C3 pin sylvestre naturel",
+                    PrixHT = 1200,
+                    QuantiteDefaut = 1
+                },
+                new Bardage
+                {
+                    Reference = "MAD-BM02-FCE-38-B",
+                    Nom = "Bardage pour finition crépis",
+                    PrixHT = 1800,
+                    QuantiteDefaut = 1
+                },
+                new Bardage
+                {
+                    Reference = "Bardage pré-peint en usine",
+                    Nom = "MAD-BM03-PPC-38-B",
+                    PrixHT = 2500,
+                    QuantiteDefaut = 1
+                },                
+                new Bardage
+                {
+                    Reference = "Bardage: Solution personelle",
+                    Nom = "MAD-BM04-BSP",
+                    PrixHT = 0,
+                    QuantiteDefaut = 1
+                }
+            });
         }
 
         // -------------------------------------------------------------------
-
 
         // TODO: CREER UN SERVICE SPÉCIFIQUE POUR GÉRER LES PROJETS
 
