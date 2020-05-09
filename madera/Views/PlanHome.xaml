@@ -155,7 +155,7 @@
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
 
-                                    <Label Text="4" 
+                                    <Label Text="{Binding QuantiteDefaut}" 
                                            Grid.Column="0"
                                            VerticalTextAlignment="Center"
                                            VerticalOptions="CenterAndExpand"
