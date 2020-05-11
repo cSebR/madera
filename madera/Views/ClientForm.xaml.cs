@@ -12,6 +12,10 @@ namespace madera.Views
         public ClientForm()
         {
             InitializeComponent();
+
+            MessagingCenter.Subscribe<BaseViewModel, bool>(this, "BackClient", async (sender, values) => {
+                await Navigation.PushAsync(new ClientList());
+            });
         }
     }
 

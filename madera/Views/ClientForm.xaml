@@ -96,26 +96,21 @@
             <custom:EntryClient Grid.Row="10"  Grid.Column="1" Text="{Binding ClientModel.Pays}"/>
 
             <!-- Buttons -->
-            <ImageButton Grid.Row="11" 
-                         Grid.Column="0"
-                         BackgroundColor="Transparent"
-                         Source="BtnSauvegarder.png"
-                         HorizontalOptions="Center"
-                         VerticalOptions="CenterAndExpand"
-                         HeightRequest="50"
-                         WidthRequest="500"
-                         Margin="0,50,0,0"
-                         Command="{Binding BtnAddClient}"/>
+            <Button Text="Enregistrer" 
+                    Grid.Row="11" 
+                    Grid.Column="0"
+                    Style="{StaticResource btnSave}"
+                    Command="{Binding BtnAddClient}"
+                    WidthRequest="400"
+                    Margin="0,50,0,0"/>
 
-            <ImageButton Grid.Row="11"
-                         Grid.Column="1"
-                         BackgroundColor="Transparent"
-                         Source="BtnAnnuler.png"
-                         HorizontalOptions="Center"
-                         VerticalOptions="CenterAndExpand"
-                         HeightRequest="50"
-                         WidthRequest="500"
-                         Margin="0,50,0,0"/>
+            <Button Text="Annuler"
+                    Grid.Row="11"
+                    Grid.Column="1"
+                    Style="{StaticResource btnCancel}"
+                    Command="{Binding BtnCancel}"
+                    WidthRequest="400"
+                    Margin="0,50,0,0"/>
         </Grid>
     </ContentPage.Content>
 

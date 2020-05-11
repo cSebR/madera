@@ -54,12 +54,29 @@ namespace madera.ViewModels
                     _btnAddClient = new Command(async () =>
                     {
                         await ClientService.AddClientAsync(_clientModel);
+                        MessagingCenter.Send<BaseViewModel, bool>(this, "BackClient", true);
                     });
                 }
                 return _btnAddClient;
             }
         }
 
-        
+        private Command _btnCancel;
+        public Command BtnCancel
+        {
+            get
+            {
+                if (_btnCancel == null)
+                {
+                    _btnCancel = new Command( () =>
+                    {
+                        MessagingCenter.Send<BaseViewModel, bool>(this, "BackClient", true);
+                    });
+                }
+                return _btnCancel;
+            }
+        }
+
+
     }
 }

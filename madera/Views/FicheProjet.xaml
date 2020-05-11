@@ -7,6 +7,15 @@
              x:Class="madera.Views.FicheProjet"
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Fiche Projet">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <Grid Margin="100,50,30,30">
             <Grid.ColumnDefinitions>
@@ -31,15 +40,14 @@
                 <RowDefinition Height="80" />
             </Grid.RowDefinitions>
 
-
             <Image Grid.RowSpan="2" Grid.Column="0"
                     Source="client_projet.png"
                     HeightRequest="60"
                     WidthRequest="60" 
                     BackgroundColor="Transparent"/>
-            <Label Text="Client" TextColor="White" Grid.Column="1"/>
-            <Label x:Name="ClientIdEntry" Grid.Row="1"  Grid.Column="1" TextColor="White"/>
-            <Label x:Name="ClientNameEntry" Grid.Row="2"  Grid.Column="1" TextColor="White"/>
+            <Label Text="Client" Grid.Column="1"/>
+            <Label Text="{Binding ProjetModel.Client.ID}" Grid.Row="1"  Grid.Column="1"/>
+            <Label Text="{Binding ProjetModel.Client.Nom}" Grid.Row="2"  Grid.Column="1"/>
             <Image Grid.RowSpan="2" Grid.Column="2" 
                     Source="projet.png"
                     HeightRequest="60"
@@ -47,32 +55,30 @@
                     BackgroundColor="Transparent"/>
             <Label Text="Projet" Grid.Column="3" TextColor="White"/>
 
-            <Label x:Name="ProjetIDEntry" Grid.Row="1" Grid.Column="3" TextColor="White"/>
-            <Label x:Name="ProjetNameEntry" Grid.Row="2" Grid.Column="3" TextColor="White"/>
-            <Label x:Name="ProjetDateEntry" Grid.Row="3" Grid.Column="3" TextColor="White"/>
+            <Label Text="{Binding ProjetModel.ID}" Grid.Row="1" Grid.Column="3"/>
+            <Label Text="{Binding ProjetModel.Nom}" Grid.Row="2" Grid.Column="3"/>
+            <Label Text="{Binding ProjetModel.Date}" Grid.Row="3" Grid.Column="3"/>
 
-            <Label Text="Plan" Grid.Row="6" TextColor="White"/>
+            <Label Text="Plan" Grid.Row="6"/>
             <ImageButton Grid.Row="7"
-                    HeightRequest="300"
-                    WidthRequest="300" 
-                    Source="creer_plan.png"
-                    BackgroundColor="Transparent"
-                   />
-            <Label Text="Devis" Grid.Row="8" TextColor="White"/>
-            <!--<ImageButton Grid.Row="9"
+                         HeightRequest="300"
+                         WidthRequest="300" 
+                         Source="creer_plan.png"
+                         BackgroundColor="Transparent"
+                         Command="{Binding AddPlan}"/>
+            <Label Text="Devis" Grid.Row="8"/>
+            <ImageButton Grid.Row="9"
                     HeightRequest="300"
                     WidthRequest="300" 
                     Source="devis.png"
-                    BackgroundColor="Transparent"
-                    />-->
-            <Label Text="Dossier Technique" Grid.Row="10" TextColor="White"/>
+                    BackgroundColor="Transparent"/>
+            <Label Text="Dossier Technique" Grid.Row="10"/>
             <!--<ImageButton Grid.Row="11"
                     HeightRequest="300"
                     WidthRequest="300" 
                     Source="devis.png"
                     BackgroundColor="Transparent"
                    />-->
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

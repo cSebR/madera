@@ -13,11 +13,11 @@ namespace madera.ViewModels
     {
         // -------------------------------------------------------------------
 
-        public PlanHomeViewModel()
+        public PlanHomeViewModel(ProjetModel projetModel)
         {
             Devis = new Devis();
             Plan = new Plan();
-            Articles = new ObservableCollection<Article>();
+            LigneDevis = new ObservableCollection<LigneDevis>();
             Modules = new ObservableCollection<Module>();
             Module = new Module();
             _resetNameField();
@@ -68,17 +68,17 @@ namespace madera.ViewModels
         /**
          * Articles du paniers
          */
-        private ObservableCollection<Article> _articles;
-        public ObservableCollection<Article> Articles
+        private ObservableCollection<LigneDevis> _ligneDevis;
+        public ObservableCollection<LigneDevis> LigneDevis
         {
             get
             {
-                return _articles;
+                return _ligneDevis;
             }
 
             set
             {
-                _articles = value;
+                _ligneDevis = value;
                 OnPropertyChanged();
             }
         }
@@ -115,6 +115,21 @@ namespace madera.ViewModels
             set
             {
                 _devis = value;
+                OnPropertyChanged();
+            }
+        }        
+        
+        private ProjetModel _projet;
+        public ProjetModel Projet
+        {
+            get
+            {
+                return _projet;
+            }
+
+            set
+            {
+                _projet = value;
                 OnPropertyChanged();
             }
         }
@@ -193,23 +208,50 @@ namespace madera.ViewModels
         }
 
         //--------------------------------------------------------------------
+
+        /**
+         * Ajoute un article au devis
+         */
         private void _addModuleArticle()
         {
-            // TODO Vérification que l'article en question n'est pas déjà 
-            // présent dans le panier
-
-            /**
-             * TODO Si l'article est présent dans le module && que l'article
-             * n'existe pas dans la liste des articles alors on l'ajoute
-             * sinon si l'article est présent dans le module && que l'article
-             * existe dans les articles on met à jour la quantité
-             */
-            this.Articles.Add(Module.CoupePrincipe);
-            this.Articles.Add(Module.Plancher);
-            this.Articles.Add(Module.Toiture);
-            this.Articles.Add(Module.Panneau);
-            this.Articles.Add(Module.Bardage);
+            foreach(Article Article in Module.getAllArticle())
+            {
+                if(Article!=null)
+                {
+                    if(!_articleIsPresent(Article))
+                    {
+                        float totalLigne = Article.PrixHT * Article.QuantiteDefaut;
+                        LigneDevis.Add(new LigneDevis
+                        {
+                            Article = Article,
+                            ArticleReference = Article.Reference,
+                            Devis = Devis,
+                            Quantite = Article.QuantiteDefaut,
+                            PrixHT = totalLigne,
+                            PrixTTC = totalLigne * 1.2f
+                        });
+                    }
+                }
+            }
         }
+
+        /**
+         * Vérifie que l'article n'est pas déjà présent dans le devis
+         */
+        private bool _articleIsPresent(Article article)
+        {
+            foreach(LigneDevis ld in _ligneDevis)
+            {
+                if(ld.Article.Reference.Equals(article.Reference))
+                {
+                    ld.Quantite += article.QuantiteDefaut;
+                    ld.PrixHT = ld.Quantite * ld.Article.PrixHT;
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /**
          * Calcul le montant total du panier
          */
@@ -217,9 +259,9 @@ namespace madera.ViewModels
         {
             float total = 0;
             
-            foreach(Article Article in Articles)
+            foreach(LigneDevis ld in LigneDevis)
             {
-                total += (Article.PrixHT * Article.QuantiteDefaut);
+                total += (ld.Article.PrixHT * ld.Quantite);
             }
 
             TotalHt = total;
@@ -453,6 +495,5 @@ namespace madera.ViewModels
                 OnPropertyChanged();
             }
         }
-
     }
 }

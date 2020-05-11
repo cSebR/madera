@@ -2,14 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="madera.Views.PlanHome"
-             xmlns:vm="clr-namespace:madera.ViewModels"
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
              Title="Plan"
              x:Name="ModuleContentPage">
-
-    <ContentPage.BindingContext>
-        <vm:PlanHomeViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -133,9 +128,10 @@
                                  HeightRequest="1"/>
                     </StackLayout>
 
-                    <ListView ItemsSource="{Binding Articles}"
-                          Grid.Row="1"
-                          Grid.ColumnSpan="5">
+                    <ListView ItemsSource="{Binding LigneDevis}"
+                              HasUnevenRows="True"
+                              Grid.Row="1"
+                              Grid.ColumnSpan="5">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -155,15 +151,15 @@
                                         <RowDefinition Height="Auto" />
                                     </Grid.RowDefinitions>
 
-                                    <Label Text="{Binding QuantiteDefaut}" 
+                                    <Label Text="{Binding Quantite}" 
                                            Grid.Column="0"
                                            VerticalTextAlignment="Center"
                                            VerticalOptions="CenterAndExpand"
                                            Style="{StaticResource arrayData}"/>
-                                    <Label Text="{Binding Reference}" 
+                                    <Label Text="{Binding Article.Reference}" 
                                            Grid.Column="1"
                                            Style="{StaticResource arrayData}"/>
-                                    <Label Text="{Binding Nom}" 
+                                    <Label Text="{Binding Article.Nom}" 
                                            Grid.Column="2"
                                            Style="{StaticResource arrayData}"/>
                                     <Label Text="{Binding PrixHT, StringFormat='{0:N}€'}" 
