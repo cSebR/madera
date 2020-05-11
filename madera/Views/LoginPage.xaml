@@ -80,11 +80,17 @@
                                           TextColor="WhiteSmoke"/>
                 </StackLayout>
 
-                <Label Text="{Binding MessageError}" 
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="Fill"
+                             Margin="0,0,10,0"
+                             Padding="20,0,20,0"
+                             BackgroundColor="White"
+                             Grid.Row="2">
+                    <Label Text="{Binding MessageError}" 
                        IsVisible="{Binding ErrorIsVisible}" 
-                       TextColor="Red"
-                       Grid.Row="2"/>
-
+                       TextColor="Red"/>
+                </StackLayout>
+                
                 <StackLayout Orientation="Horizontal" 
                              HorizontalOptions="Fill"
                              Margin="0,0,10,0"
@@ -94,8 +100,7 @@
                         Command="{Binding Login}"  
                         TextColor="WhiteSmoke"
                         BackgroundColor="{DynamicResource Btn}"
-                        HorizontalOptions="FillAndExpand"
-                        Grid.Row="3"/>
+                        HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
                 
             </Grid>
