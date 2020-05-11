@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="madera.Views.ClientList"
              BackgroundImageSource="BackGroud_Portrait_2.jpg"
-             Title="List_Client">
+             Title="Liste des clients">
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>

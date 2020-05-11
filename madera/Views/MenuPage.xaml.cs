@@ -24,7 +24,6 @@ namespace madera.Views
                 new HomeMenuItem { Id = MenuItemType.Profil, Title="Profil" },
                 new HomeMenuItem { Id = MenuItemType.Projet, Title="Projet" },
                 new HomeMenuItem { Id = MenuItemType.Client, Title="Client" },
-                new HomeMenuItem { Id = MenuItemType.Plan, Title="Plan" },
                 new HomeMenuItem { Id = MenuItemType.Deconnexion, Title="Déconnexion"}
 
             };

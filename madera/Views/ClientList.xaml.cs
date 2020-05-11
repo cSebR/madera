@@ -1,4 +1,5 @@
 ﻿using madera.Models;
+using madera.Services;
 using madera.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ namespace madera.Views
             InitializeComponent();
             this.BindingContext = new ClientViewModel();
         }
+
+        // -------------------------------------------------------------------
 
         protected override async void OnAppearing()
         {

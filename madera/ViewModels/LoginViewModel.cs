@@ -4,6 +4,7 @@ using madera.Views;
 using System.Net;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using System;
 
 namespace madera.ViewModels
 {
@@ -142,21 +143,28 @@ namespace madera.ViewModels
                          * Authentification de l'utilisateur via API
                          * Retourne le code HTTP
                          */
-                        HttpStatusCode status = await _serviceAuth.Login(authModel);
+                         try
+                         {
+                            HttpStatusCode status = await _serviceAuth.Login(authModel);
 
-                        switch (status)
-                        {
-                            case HttpStatusCode.BadRequest:
-                                ErrorMessage("Identifiants incorrects, veuillez vérifier votre email et mot de passe.", true);
-                                break;
-                            case HttpStatusCode.InternalServerError:
-                                ErrorMessage("Le serveur est actuellement indisponible, veuillez réessayer ultérieurement.", true);
-                                break;
-                            case HttpStatusCode.OK:
-                                Application.Current.MainPage = new MainPage();
-                                ErrorMessage();
-                                break;
-                        }
+                            switch (status)
+                            {
+                                case HttpStatusCode.BadRequest:
+                                    ErrorMessage("Identifiants incorrects, veuillez vérifier votre email et mot de passe.", true);
+                                    break;
+                                case HttpStatusCode.InternalServerError:
+                                    ErrorMessage("Le serveur est actuellement indisponible, veuillez réessayer ultérieurement.", true);
+                                    break;
+                                case HttpStatusCode.OK:
+                                    Application.Current.MainPage = new MainPage();
+                                    ErrorMessage();
+                                    break;
+                            }
+                         } 
+                         catch
+                         {
+                            MessagingCenter.Send<BaseViewModel, String>(this, "ErrorILogin", "Une connexion internet est obligatoire pour se connecter à l'application");
+                         }
                     },
                     () =>
                         /**

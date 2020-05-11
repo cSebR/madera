@@ -1,5 +1,6 @@
 ﻿using SQLite;
 using SQLiteNetExtensions.Attributes;
+using System.Collections.Generic;
 
 namespace madera.Models
 {
@@ -22,6 +23,9 @@ namespace madera.Models
 
         [ManyToOne]
         public ClientModel Client { get; set; }
+
+        [OneToMany] 
+        public List<Plan> Plans { get; set; }
 
         public string ClientNom
         {

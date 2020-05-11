@@ -11,44 +11,92 @@ namespace madera.ViewModels
 {
     public class PlanHomeViewModel : BaseViewModel
     {
-        //--------------------------------------------------------------------
+        // -------------------------------------------------------------------
 
-        public PlanHomeViewModel()
+        public PlanHomeViewModel(ProjetModel projetModel)
         {
-            this.Devis = new Devis();
-            this.Plan = new Plan();
-            this.Test = "abcdef";
-            this.Article = new ObservableCollection<Article>();
+            Devis = new Devis();
+            Plan = new Plan();
+            LigneDevis = new ObservableCollection<LigneDevis>();
+            Modules = new ObservableCollection<Module>();
+            Module = new Module();
+            _resetNameField();
+            _registerMessenger();
         }
 
-        //--------------------------------------------------------------------
+        // -------------------------------------------------------------------
 
-        private string _test;
-        public string Test
+        private void _registerMessenger()
+        {
+            MessagingCenter.Subscribe<BaseViewModel, CoupePrincipe>(this, "AddCoupePrincipe", (sender, _selectedCoupePrincipe) => {
+                Module.CoupePrincipe = _selectedCoupePrincipe;
+                NomCoupePrincipe = _selectedCoupePrincipe.Reference;
+            });
+
+            MessagingCenter.Subscribe<BaseViewModel, Plancher>(this, "AddPlancher", (sender, _selectedPlancher) => {
+                Module.Plancher = _selectedPlancher;
+                NomPlancher = _selectedPlancher.Reference;
+            });
+
+            MessagingCenter.Subscribe<BaseViewModel, Toiture>(this, "AddToiture", (sender, _selectedToiture) => {
+                Module.Toiture = _selectedToiture;
+                NomToiture = _selectedToiture.Reference;
+            });
+
+            MessagingCenter.Subscribe<BaseViewModel, Panneau>(this, "AddPanneau", (sender, _selectedPanneau) => {
+                Module.Panneau = _selectedPanneau;
+                NomPanneaux = _selectedPanneau.Reference;
+            });
+
+            MessagingCenter.Subscribe<BaseViewModel, Bardage>(this, "AddBardage", (sender, _selectedBardage) => {
+                Module.Bardage = _selectedBardage;
+                NomBardage = _selectedBardage.Reference;
+            });
+        }
+
+        private void _resetNameField()
+        {
+            NomCoupePrincipe = "choix coupe de principe";
+            NomPlancher = "choix plancher";
+            NomToiture = "choix toiture";
+            NomPanneaux = "choix panneaux";
+            NomBardage = "choix bardage";
+        }
+
+        // -------------------------------------------------------------------
+
+        /**
+         * Articles du paniers
+         */
+        private ObservableCollection<LigneDevis> _ligneDevis;
+        public ObservableCollection<LigneDevis> LigneDevis
         {
             get
             {
-                return _test;
+                return _ligneDevis;
             }
 
             set
             {
-                _test = value;
+                _ligneDevis = value;
                 OnPropertyChanged();
             }
         }
 
-        private ObservableCollection<Article> _article;
-        public ObservableCollection<Article> Article
+        /**
+         * Liste des modules du devis
+         */
+        private ObservableCollection<Module> _modules;
+        public ObservableCollection<Module> Modules
         {
             get
             {
-                return _article;
+                return _modules;
             }
 
             set
             {
-                _article = value;
+                _modules = value;
                 OnPropertyChanged();
             }
         }
@@ -67,6 +115,21 @@ namespace madera.ViewModels
             set
             {
                 _devis = value;
+                OnPropertyChanged();
+            }
+        }        
+        
+        private ProjetModel _projet;
+        public ProjetModel Projet
+        {
+            get
+            {
+                return _projet;
+            }
+
+            set
+            {
+                _projet = value;
                 OnPropertyChanged();
             }
         }
@@ -125,6 +188,86 @@ namespace madera.ViewModels
             }
         }
 
+
+        /**
+         * Module en édition
+         */
+        private Module _module;
+        public Module Module
+        {
+            get
+            {
+                return _module;
+            }
+
+            set
+            {
+                _module = value;
+                OnPropertyChanged();
+            }
+        }
+
+        //--------------------------------------------------------------------
+
+        /**
+         * Ajoute un article au devis
+         */
+        private void _addModuleArticle()
+        {
+            foreach(Article Article in Module.getAllArticle())
+            {
+                if(Article!=null)
+                {
+                    if(!_articleIsPresent(Article))
+                    {
+                        float totalLigne = Article.PrixHT * Article.QuantiteDefaut;
+                        LigneDevis.Add(new LigneDevis
+                        {
+                            Article = Article,
+                            ArticleReference = Article.Reference,
+                            Devis = Devis,
+                            Quantite = Article.QuantiteDefaut,
+                            PrixHT = totalLigne,
+                            PrixTTC = totalLigne * 1.2f
+                        });
+                    }
+                }
+            }
+        }
+
+        /**
+         * Vérifie que l'article n'est pas déjà présent dans le devis
+         */
+        private bool _articleIsPresent(Article article)
+        {
+            foreach(LigneDevis ld in _ligneDevis)
+            {
+                if(ld.Article.Reference.Equals(article.Reference))
+                {
+                    ld.Quantite += article.QuantiteDefaut;
+                    ld.PrixHT = ld.Quantite * ld.Article.PrixHT;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /**
+         * Calcul le montant total du panier
+         */
+        private void _calculerTotal()
+        {
+            float total = 0;
+            
+            foreach(LigneDevis ld in LigneDevis)
+            {
+                total += (ld.Article.PrixHT * ld.Quantite);
+            }
+
+            TotalHt = total;
+            TotalTtc = total * 1.2f;
+        }
+
         //--------------------------------------------------------------------
 
         /**
@@ -156,6 +299,89 @@ namespace madera.ViewModels
         }
 
         /**
+         * Commande lors d'une action sur le bouton "Choix Coupe Principal"
+         */
+        private Command _btnCoupePrincipal;
+        public Command BtnCoupePrincipal
+        {
+            get
+            {
+                if (_btnCoupePrincipal == null)
+                {
+                    _btnCoupePrincipal = new Command(async () =>
+                    {
+                        await PopupNavigation.Instance.PushAsync(new CoupePrincipeModule());
+                    });
+                }
+                return _btnCoupePrincipal;
+            }
+        }        
+        
+        private Command _btnPlancher;
+        public Command BtnPlancher
+        {
+            get
+            {
+                if (_btnPlancher == null)
+                {
+                    _btnPlancher = new Command(async () =>
+                    {
+                        await PopupNavigation.Instance.PushAsync(new PlancherModule());
+                    });
+                }
+                return _btnPlancher;
+            }
+        }
+
+        private Command _btnToiture;
+        public Command BtnToiture
+        {
+            get
+            {
+                if (_btnToiture == null)
+                {
+                    _btnToiture = new Command(async () =>
+                    {
+                        await PopupNavigation.Instance.PushAsync(new ToitureModule());
+                    });
+                }
+                return _btnToiture;
+            }
+        }
+
+        private Command _btnPanneau;
+        public Command BtnPanneau
+        {
+            get
+            {
+                if (_btnPanneau == null)
+                {
+                    _btnPanneau = new Command(async () =>
+                    {
+                        await PopupNavigation.Instance.PushAsync(new PanneauModule());
+                    });
+                }
+                return _btnPanneau;
+            }
+        }
+
+        private Command _btnBardage;
+        public Command BtnBardage
+        {
+            get
+            {
+                if (_btnBardage == null)
+                {
+                    _btnBardage = new Command(async () =>
+                    {
+                        await PopupNavigation.Instance.PushAsync(new BardageModule());
+                    });
+                }
+                return _btnBardage;
+            }
+        }
+
+        /**
          * Commande lors d'une action sur le bouton "Créer Module"
          */
         private Command _btnAddModule;
@@ -165,44 +391,108 @@ namespace madera.ViewModels
             {
                 if (_btnAddModule == null)
                 {
-                    _btnAddModule = new Command( () =>
+                    _btnAddModule = new Command( async () =>
                     {
-                        this.Article.Add(
-                            new Article
-                            {
-                                ArticleNom = "Module-Rect-500x750",
-                                ArticleReference = 12345674,
-                                ArticlePrix = 750
-                            }
-                        );
-                        this.Article.Add(
-                            new Article
-                            {
-                                ArticleNom = "Module-Rect-500x750",
-                                ArticleReference = 12345674,
-                                ArticlePrix = 750
-                            }
-                        );
-                        this.Article.Add(
-                            new Article
-                            {
-                                ArticleNom = "Module-Rect-500x750",
-                                ArticleReference = 12345674,
-                                ArticlePrix = 750
-                            }
-                        );
-                        this.Article.Add(
-                            new Article
-                            {
-                                ArticleNom = "Module-Rect-500x750",
-                                ArticleReference = 12345674,
-                                ArticlePrix = 750
-                            }
-                        );
-                        //await PopupNavigation.Instance.PushAsync(new CoupePrincipeModule());
+                        // Ajoute le module à la liste des modules du plan
+                        Modules.Add(Module);
+
+                        // Ajoute les articles du modules dans la liste des articles
+                        _addModuleArticle();
+
+                        // Reset le nom des champs du choix du module
+                        _resetNameField();
+
+                        // Calcul le total du panier
+                        _calculerTotal();
+
+                        // Reset le module
+                        Module = new Module();
+
+                        // Supprime le popup
+                        await PopupNavigation.Instance.PopAsync();
                     });
                 }
                 return _btnAddModule;
+            }
+        }
+
+        // -------------------------------------------------------------------
+
+        /**
+         * Création d'un module
+         */
+        private string _nomCoupePrincipe;
+        public string NomCoupePrincipe
+        {
+            get
+            {
+                return _nomCoupePrincipe;
+            }
+
+            set
+            {
+                _nomCoupePrincipe = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _nomPlancher;
+        public string NomPlancher
+        {
+            get
+            {
+                return _nomPlancher;
+            }
+
+            set
+            {
+                _nomPlancher = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _nomToiture;
+        public string NomToiture
+        {
+            get
+            {
+                return _nomToiture;
+            }
+
+            set
+            {
+                _nomToiture = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _nomPanneaux;
+        public string NomPanneaux
+        {
+            get
+            {
+                return _nomPanneaux;
+            }
+
+            set
+            {
+                _nomPanneaux = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _nomBardage;
+        public string NomBardage
+        {
+            get
+            {
+                return _nomBardage;
+            }
+
+            set
+            {
+                _nomBardage = value;
+                OnPropertyChanged();
             }
         }
     }

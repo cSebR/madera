@@ -10,26 +10,33 @@ namespace madera.Models
     public class Plan
     {
         [PrimaryKey, AutoIncrement]
-        public long PlanReference { get; set; }
+        public long Reference { get; set; }
 
         [MaxLength(85)]
-        public string PlanNom { get; set; }
+        public string Nom { get; set; }
 
-        public DateTime Date_creation { get; set; }
+        public DateTime CreeLe { get; set; }
 
         [ForeignKey(typeof(Utilisateur)), NotNull]
-        public long PlanCreeParId { get; set; }
+        public long CreeParId { get; set; }
 
         [OneToOne]
-        public Utilisateur PlanCreePar { get; set; }
+        public Utilisateur CreePar { get; set; }
 
         [ForeignKey(typeof(Utilisateur))]
-        public long PlanModifieParId { get; set; }
+        public long ModifieParId { get; set; }
 
         [OneToOne]
-        public Utilisateur PlanModifiePar { get; set; }
+        public Utilisateur ModifiePar { get; set; }
 
-        [ManyToMany(typeof(PlanModule))]
+        [ForeignKey(typeof(ProjetModel))] 
+        public int ProjetModelId { get; set; }
+
+        [ManyToOne] 
+        public ProjetModel ProjetModel { get; set; }
+
+        [OneToMany]
         public List<Module> Modules { get; set; }
+
     }
 }

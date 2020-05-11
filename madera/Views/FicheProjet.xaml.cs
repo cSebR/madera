@@ -17,26 +17,11 @@ namespace madera.Views
         public FicheProjet(ProjetModel projet)
         {
             InitializeComponent();
-            BindingContext = new ProjetViewModel();
+            BindingContext = new FicheProjetViewModel(projet);
 
-            ClientIdEntry.Text = projet.ClientId.ToString();
-            ClientNameEntry.Text = projet.ClientNom;
-
-            ProjetIDEntry.Text = projet.ID.ToString();
-            ProjetNameEntry.Text = projet.Nom;
-            ProjetDateEntry.Text = projet.Date;
-
+            MessagingCenter.Subscribe<BaseViewModel, ProjetModel>(this, "AddPlan", async (sender, projetModel) => {
+                await Navigation.PushAsync(new PlanHome(projetModel));
+            });
         }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            ((ProjetViewModel)this.BindingContext).Init();
-
-        }
-
-        
-
-
     }
 }

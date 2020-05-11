@@ -1,4 +1,6 @@
-﻿using System;
+﻿using madera.Services;
+using madera.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,10 @@ namespace madera.Views
         public LoginPage()
         {
             InitializeComponent();
+
+            MessagingCenter.Subscribe<BaseViewModel, String>(this, "ErrorILogin", (sender, message) => {
+                DependencyService.Get<IToastNotificationService>().LongToast(message);
+            });
         }
     }
 }

@@ -23,6 +23,18 @@
     <Compile Update="Views\PopupView.xaml.cs">
       <DependentUpon>PopupView.xaml</DependentUpon>
 	</Compile>
+    <Compile Update="Views\PopupViews\BardageModule.xaml.cs">
+      <DependentUpon>BardageModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PopupViews\PanneauModule.xaml.cs">
+      <DependentUpon>PanneauModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PopupViews\ToitureModule.xaml.cs">
+      <DependentUpon>ToitureModule.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PopupViews\PlancherModule.xaml.cs">
+      <DependentUpon>PlancherModule.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PopupViews\ModulePage.xaml.cs">
       <DependentUpon>ModulePage.xaml</DependentUpon>
     </Compile>

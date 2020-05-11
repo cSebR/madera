@@ -17,17 +17,17 @@ namespace madera.Views
         public FicheClient(ClientModel client)
         {
             InitializeComponent();
-            BindingContext = new ClientViewModel();
+            BindingContext = new FicheClientViewModel(client);
 
-            NomClientEntry.Text = client.Nom;
-            PrenomClientEntry.Text = client.Prenom;
-        }
+            MessagingCenter.Subscribe<BaseViewModel, string[]>(this, "DisplayAlert", async (sender, values) => {
+                bool answer = await DisplayAlert(values[0], values[1], values[2], values[3]);
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            ((ClientViewModel)this.BindingContext).Init();
-
+                if(answer)
+                {
+                    await ((FicheClientViewModel)BindingContext).RemoveClientAsync();
+                    await Navigation.PushAsync(new ClientList());
+                }
+            });
         }
     }
 }

@@ -13,7 +13,7 @@ namespace madera.Models
         public string RefClient { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public string DteNaissance { get; set; }
+        public string DateNaissance { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }
         public string Commentaire { get; set; }
@@ -22,11 +22,6 @@ namespace madera.Models
         public string CodePostal { get; set; }
         public string Ville { get; set; }
         public string Pays { get; set; }
-
-        public ClientModel()
-        {
-
-        }
 
         public string FullName
         {

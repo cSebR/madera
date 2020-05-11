@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using madera.Models;
 using Xamarin.Forms;
 using madera.Views;
+using madera.ViewModels;
 
 namespace madera.Views
 {
@@ -11,26 +12,11 @@ namespace madera.Views
         public ClientForm()
         {
             InitializeComponent();
+
+            MessagingCenter.Subscribe<BaseViewModel, bool>(this, "BackClient", async (sender, values) => {
+                await Navigation.PushAsync(new ClientList());
+            });
         }
-
-        async void OnSaveClientClicked(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(NomClientEntry.Text) && !string.IsNullOrWhiteSpace(PrenomClientEntry.Text))
-            {
-                await App.Database.SaveClientAsync(new ClientModel
-                {
-                    Nom = NomClientEntry.Text,
-                    Prenom = PrenomClientEntry.Text,
-                    RefClient = NomClientEntry.Text + PrenomClientEntry.Text + DateTime.Now
-                    //Age = int.Parse(ageEntry.Text)
-                });
-
-                NomClientEntry.Text = PrenomClientEntry.Text = String.Empty;
-                //ClientList.ItemsSource = await App.Database.GetPeopleAsync();
-            }
-
-        }
-
     }
 
 }

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:vm="clr-namespace:madera.ViewModels"
+    x:Class="madera.Views.PopupViews.PanneauModule">
+   
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <pages:PopupPage.BindingContext>
+        <vm:PanneauViewModel />
+    </pages:PopupPage.BindingContext>
+
+    <Frame CornerRadius="10"  
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" 
+           Padding="20, 20, 20, 20"
+           OutlineColor="{StaticResource BorderPopup}" 
+           BackgroundColor="{StaticResource BgPopup}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <ListView ItemsSource="{Binding Panneaux}"
+                      IsPullToRefreshEnabled="true"
+                      SelectionMode="Single"
+                      SelectedItem="{Binding SelectedPanneau}"
+                      Grid.Row="0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label Text="{Binding Nom}" TextColor="DarkBlue"/>
+                                    <Label Text="{Binding Reference, StringFormat='Référence: {0:0}'}" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Ajouter" 
+                    Style="{StaticResource btnOther}"
+                    Grid.Row="1"
+                    Command="{Binding BtnPanneau}"/>
+        </Grid>
+    </Frame>
+</pages:PopupPage>

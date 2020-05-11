@@ -11,10 +11,15 @@ namespace madera.Services
     {
         private readonly SQLiteAsyncConnection _database;
 
+        // -------------------------------------------------------------------
+
         public DevisService()
         {
             _database = App.Database._database;
         }
+
+        // -------------------------------------------------------------------
+
         public Task<List<Devis>> GetAllDevisAsync()
         {
             return _database.Table<Devis>().ToListAsync();
@@ -24,6 +29,5 @@ namespace madera.Services
         {
             return _database.InsertAsync(devis);
         }
-
     }
 }
