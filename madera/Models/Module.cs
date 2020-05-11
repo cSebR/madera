@@ -50,5 +50,17 @@ namespace madera.Models
 
         [ManyToOne]
         public Bardage Bardage { get; set; }
+
+        public List<Article> getAllArticle()
+        {
+            return new List<Article>()
+            {
+                CoupePrincipe,
+                Plancher,
+                Toiture,
+                Panneau,
+                Bardage
+            };
+        }
     }
 }

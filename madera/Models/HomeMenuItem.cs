@@ -9,7 +9,6 @@ namespace madera.Models
         Profil,
         Projet,
         Client,
-        Plan,
         Deconnexion
 
     }

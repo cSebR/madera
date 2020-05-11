@@ -14,7 +14,7 @@ namespace madera.Models
         public int Quantite { get; set; }
 
         [ForeignKey(typeof(Article)), NotNull]
-        public int ArticleReference { get; set; }
+        public string ArticleReference { get; set; }
 
         [ManyToOne]
         public Article Article { get; set; }
@@ -24,5 +24,9 @@ namespace madera.Models
 
         [ManyToOne]
         public Devis Devis { get; set; }
+
+        public float PrixHT { get; set; }
+
+        public float PrixTTC { get; set; }
     }
 }

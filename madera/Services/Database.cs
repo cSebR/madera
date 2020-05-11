@@ -347,15 +347,15 @@ namespace madera.Services
                 },
                 new Bardage
                 {
-                    Reference = "Bardage pré-peint en usine",
-                    Nom = "MAD-BM03-PPC-38-B",
+                    Reference = "MAD-BM03-PPC-38-B",
+                    Nom = "Bardage pré-peint en usine",
                     PrixHT = 2500,
                     QuantiteDefaut = 1
                 },                
                 new Bardage
                 {
-                    Reference = "Bardage: Solution personelle",
-                    Nom = "MAD-BM04-BSP",
+                    Reference = "MAD-BM04-BSP",
+                    Nom = "Bardage: Solution personelle",
                     PrixHT = 0,
                     QuantiteDefaut = 1
                 }

@@ -9,6 +9,11 @@ namespace madera.Models
     [Table("devis")]
     public class Devis
     {
+        public Devis()
+        {
+            LigneDevis = new List<LigneDevis>();
+        }
+
         [PrimaryKey, AutoIncrement]
         public long Reference { get; set; }
 
@@ -38,6 +43,6 @@ namespace madera.Models
         public TypeEtat TypeEtat { get; set; }
 
         [OneToMany]
-        public List<LigneDevis> LigneDEvis { get; set; }
+        public List<LigneDevis> LigneDevis { get; set; }
     }
 }
